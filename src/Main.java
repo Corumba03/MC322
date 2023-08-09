@@ -6,12 +6,15 @@ public class Main {
     public static void main(String[] args) {
         // Press Alt+Enter with your caret at the highlighted text to see how
         // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("Hello and welcome!");
 
         // Press Shift+F10 or click the green arrow button in the gutter to run the code.
+        Livro novoLivro = new Livro("Calculo", "Hallyday", "12345");
+        Livro.Volume umLivro = novoLivro.new Volume();
+
+        System.out.println(umLivro.getId());
+
 
     }
-    Book hallyday = new Book("Hallyday", "O Hallyday", "12345");
-    Book.Volume newHallyday = hallyday.new Volume("Hallyday", "O Hallyday", "12345");
-    System.out.println(newHallyday.getTitle());
 }
+
