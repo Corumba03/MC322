@@ -1,18 +1,28 @@
 import java.awt.print.Book;
+import java.util.ArrayList;
+import java.util.List;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.println("Hello and welcome!");
+        List<Livro> biblioteca = new ArrayList<>(); // Lista de livros registrados (não exemplares)
+        List<Livro.Exemplar> acervo = new ArrayList<>(); // Lista de todos os exemplares
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        Livro novoLivro = new Livro("Calculo", "Hallyday", "12345");
-        Livro.Volume umLivro = novoLivro.new Volume();
+        Livro umLivroQualquer = new Livro("O título", "O autor", "12345", biblioteca);
+        Livro.Exemplar oLivro = umLivroQualquer.new Exemplar(acervo);
 
-        System.out.println(umLivro.getId());
+        System.out.println("Livros da biblioteca:");
+        for (int i = 0; i < biblioteca.size(); i++){
+            System.out.printf(biblioteca.get(i).getTitle() + '|');
+            System.out.printf(biblioteca.get(i).getAuthor() + '|');
+            System.out.println(biblioteca.get(i).getIsbn() + '\n');
+
+        }
+
+        System.out.println("Acervo da biblioteca:");
+        for (int i = 0; i < acervo.size(); i++){
+            System.out.printf(acervo.get(i).getTitle_() + '|');
+            System.out.println(acervo.get(i).getId());
+        }
 
 
     }
