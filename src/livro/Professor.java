@@ -23,4 +23,36 @@ public class Professor extends Pessoa {
         this.grad = grad;
         this.post_grad = post_grad;
     }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getInst() {
+        return inst;
+    }
+
+    public void setInst(String inst) {
+        this.inst = inst;
+    }
+
+    public String getGrad() {
+        return grad;
+    }
+
+    public void setGrad(String grad) {
+        this.grad = grad;
+    }
+
+    public String getPost_grad() {
+        return post_grad;
+    }
+
+    public void setPost_grad(String post_grad) {
+        this.post_grad = post_grad;
+    }
 }
