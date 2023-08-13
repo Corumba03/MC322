@@ -1,12 +1,13 @@
-import livro.Exemplar;
+package biblioteca;
+
 import livro.Livro;
 import pessoas.Pessoa;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Biblioteca {
+    // Classe que representa uma biblioteca
     private String nome;
     private String inst; // Instituto
     private List<Livro> acervo;
@@ -65,23 +66,4 @@ public class Biblioteca {
         this.count = (short) acervo.size();
     }
 
-    public void addLivro(String title, String author, String isbn){
-        short index = -1;
-        // Olha entre todos os livros da biblioteca, se já houver algum livro igual marca seu index
-        for (short i = 0; i < acervo.size(); i++){
-            if (Objects.equals(acervo.get(i).getIsbn(), isbn)){
-                index = i;
-                break;
-            }
-        }
-        // Se foi detectado o livro no sistema, apenas adiciona um exemplar deste livro, caso contrário adiciona o livro e este exemplar no sistema
-        if (index != -1){
-            Exemplar novoExemplar = new Exemplar(acervo.get(index));
-        } else {
-            Livro novoLivro = new Livro(title, author, isbn);
-            Exemplar novoExemplar = new Exemplar(novoLivro);
-            acervo.add(novoLivro);
-            this.updateCount();
-        }
-    }
 }

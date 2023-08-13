@@ -1,13 +1,22 @@
 package pessoas;
 
+import biblioteca.Biblioteca;
+import livro.Exemplar;
+import livro.Livro;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Aluno extends Pessoa{
     private String ra;
-    private byte curso; // (pelo código)
+    private int curso; // (pelo código)
+    private List<Exemplar> material;
 
-    public Aluno(String name, String cpf, String ra, byte curso) {
+    public Aluno(String name, String cpf, String ra, int curso) {
         super(name, cpf);
         this.ra = ra;
         this.curso = curso;
+        this.material = new ArrayList<>();
     }
 
     public String getRa() {
@@ -18,11 +27,28 @@ public class Aluno extends Pessoa{
         this.ra = ra;
     }
 
-    public byte getCurso() {
+    public int getCurso() {
         return curso;
     }
 
-    public void setCurso(byte curso) {
+    public void setCurso(int curso) {
         this.curso = curso;
+    }
+
+    public List<Exemplar> getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(List<Exemplar> material) {
+        this.material = material;
+    }
+    // Função para pegar um livro emprestado. (por hora sem exception handling)
+    public void pegarLivro(Biblioteca biblioteca, Livro livro){
+        for (int i = 0; i < livro.getExemplares().size(); i++){
+            if (livro.getExemplares().get(i).isAvailable()){
+                this.material.add(livro.getExemplares().get(i));
+                livro.getExemplares().get(i).setAvailable(false);
+            }
+        }
     }
 }

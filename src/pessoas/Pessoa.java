@@ -1,6 +1,8 @@
 package pessoas;
 
+
 public class Pessoa {
+    // Classe que representa uma pessoa genérica, por hora sem função específica
     private String name;
     private String cpf;
 
@@ -24,4 +26,5 @@ public class Pessoa {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+
 }

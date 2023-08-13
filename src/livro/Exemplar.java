@@ -1,6 +1,7 @@
 package livro;
 
 public class Exemplar extends Livro {
+    // Classe que representa um exemplar de um livro
     private String id;
     private boolean availability;
 

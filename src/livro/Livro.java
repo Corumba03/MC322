@@ -1,9 +1,11 @@
 package livro;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Livro {
+    // Classe que representa todos os livros com mesmo título, autor e ISBN
     private String title;
     private String author;
     private final String isbn;
