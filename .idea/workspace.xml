@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Novas classes e métodos">
+    <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Versão final Lab 01">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/Biblioteca.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/Biblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/livro/Exemplar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/livro/Exemplar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/livro/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/livro/Livro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/livro/Professor.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pessoas/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pessoas/Aluno.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pessoas/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pessoas/Pessoa.java" afterDir="false" />
     </list>
@@ -117,7 +117,8 @@
       <workItem from="1691603413198" duration="5037000" />
       <workItem from="1691705276714" duration="5809000" />
       <workItem from="1691801782741" duration="1845000" />
-      <workItem from="1691895574551" duration="440000" />
+      <workItem from="1691895574551" duration="868000" />
+      <workItem from="1692057992241" duration="4459000" />
     </task>
     <task id="LOCAL-00001" summary="I hate Java">
       <option name="closed" value="true" />
@@ -175,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691711223657</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Versão final Lab 01">
+      <option name="closed" value="true" />
+      <created>1691896449224</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1691896449224</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +205,7 @@
     <MESSAGE value="I hate Java" />
     <MESSAGE value="I love Java" />
     <MESSAGE value="Novas classes e métodos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Novas classes e métodos" />
+    <MESSAGE value="Versão final Lab 01" />
+    <option name="LAST_COMMIT_MESSAGE" value="Versão final Lab 01" />
   </component>
 </project>

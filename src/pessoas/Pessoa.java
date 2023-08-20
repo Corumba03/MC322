@@ -3,20 +3,20 @@ package pessoas;
 
 public class Pessoa {
     // Classe que representa uma pessoa genérica, por hora sem função específica
-    private String name;
+    private String nome;
     private String cpf;
 
-    public Pessoa(String name, String cpf) {
-        this.name = name;
+    public Pessoa(String nome, String cpf) {
+        this.nome = nome;
         this.cpf = cpf;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getCpf() {
