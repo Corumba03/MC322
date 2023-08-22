@@ -1,13 +1,13 @@
 package pessoas;
 
 import biblioteca.Biblioteca;
-import livro.Exemplar;
-import livro.Livro;
+import multimidia.Exemplar;
+import multimidia.Livro;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Aluno extends Pessoa{
+public class Aluno extends Membro{
     private String ra;
     private int curso; // (pelo código)
     private List<Exemplar> material;

@@ -1,10 +1,10 @@
-package livro;
+package multimidia;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Livro {
+public class Livro extends ItemMultimidia{
     // Classe que representa todos os livros com mesmo título, autor e ISBN
     private String title;
     private String author;

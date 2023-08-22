@@ -1,4 +1,4 @@
-package livro;
+package multimidia;
 
 public class Exemplar extends Livro {
     // Classe que representa um exemplar de um livro

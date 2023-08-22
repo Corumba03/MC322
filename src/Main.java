@@ -1,6 +1,6 @@
 import biblioteca.Biblioteca;
-import livro.Exemplar;
-import livro.Livro;
+import multimidia.Exemplar;
+import multimidia.Livro;
 import pessoas.Aluno;
 
 public class Main {

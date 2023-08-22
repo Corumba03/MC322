@@ -1,12 +1,12 @@
 package pessoas;
 
 
-public class Pessoa {
+public class Membro {
     // Classe que representa uma pessoa genérica, por hora sem função específica
     private String name;
     private String cpf;
 
-    public Pessoa(String name, String cpf) {
+    public Membro(String name, String cpf) {
         this.name = name;
         this.cpf = cpf;
     }

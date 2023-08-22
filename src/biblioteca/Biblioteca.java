@@ -1,17 +1,18 @@
 package biblioteca;
 
-import livro.Livro;
-import pessoas.Pessoa;
+import pessoas.Membro;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import multimidia.Livro;
 
 public class Biblioteca {
     // Classe que representa uma biblioteca
     private String nome;
     private String inst; // Instituto
     private List<Livro> acervo;
-    private List<Pessoa> membros;
+    private List<Membro> membros;
     private short count; // Total de livros
 
     public Biblioteca(String nome, String inst) {
@@ -46,11 +47,11 @@ public class Biblioteca {
         this.acervo = acervo;
     }
 
-    public List<Pessoa> getMembros() {
+    public List<Membro> getMembros() {
         return membros;
     }
 
-    public void setMembros(List<Pessoa> membros) {
+    public void setMembros(List<Membro> membros) {
         this.membros = membros;
     }
 
