@@ -12,13 +12,8 @@ public class Biblioteca {
     private String nome;
     private String inst; // Instituto
     private List<Livro> acervo;
-<<<<<<< HEAD
     private List<Membro> membros;
     private short count; // Total de livros
-=======
-    private List<Pessoa> membros;
-    private int total; // Total de livros
->>>>>>> 7b0ce040d5cee0e9bfefc6124ab78068b6fd1723
 
     public Biblioteca(String nome, String inst) {
         this.nome = nome;
