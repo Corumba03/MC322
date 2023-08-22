@@ -12,8 +12,8 @@ public class Aluno extends Membro{
     private int curso; // (pelo código)
     private List<Exemplar> material;
 
-    public Aluno(String name, String cpf, String ra, int curso) {
-        super(name, cpf);
+    public Aluno(String nome, String cpf, String ra, int curso) {
+        super(nome, cpf);
         this.ra = ra;
         this.curso = curso;
         this.material = new ArrayList<>();

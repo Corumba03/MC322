@@ -12,13 +12,18 @@ public class Biblioteca {
     private String nome;
     private String inst; // Instituto
     private List<Livro> acervo;
+<<<<<<< HEAD
     private List<Membro> membros;
     private short count; // Total de livros
+=======
+    private List<Pessoa> membros;
+    private int total; // Total de livros
+>>>>>>> 7b0ce040d5cee0e9bfefc6124ab78068b6fd1723
 
     public Biblioteca(String nome, String inst) {
         this.nome = nome;
         this.inst = inst;
-        this.count = 0;
+        this.total = 0;
         this.acervo = new ArrayList<>();
         this.membros = new ArrayList<>();
     }
@@ -55,16 +60,16 @@ public class Biblioteca {
         this.membros = membros;
     }
 
-    public short getCount() {
-        return count;
+    public int getTotal() {
+        return total;
     }
 
-    public void setCount(short count) {
-        this.count = count;
+    public void setTotal(int total) {
+        this.total = total;
     }
 
     private void updateCount(){
-        this.count = (short) acervo.size();
+        this.total = acervo.size();
     }
 
 }

@@ -12,7 +12,8 @@ public class Main {
 
         Aluno umAluno = new Aluno("Um aluno", "100.200.300-40", "231231", 42);
         umAluno.pegarLivro(biblioteca, umLivro);
-        System.out.println(umAluno.getMaterial().get(0).getTitle());
+        System.out.println(umAluno.getMaterial().get(0).getTitulo());
+
     }
 }
 

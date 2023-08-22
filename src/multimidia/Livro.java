@@ -6,42 +6,42 @@ import java.util.List;
 
 public class Livro extends ItemMultimidia{
     // Classe que representa todos os livros com mesmo título, autor e ISBN
-    private String title;
-    private String author;
-    private final String isbn;
+    private String titulo;
+    private String autor;
+    private final String ISBN;
     protected List<Exemplar> exemplares;
-    private byte count; // Contagem de exemplares
-    private byte available; // Contagem de exemplares disponíveis
+    private int qtd; // Contagem de exemplares
+    private int disponiveis; // Contagem de exemplares disponíveis
 
     // Constructor
-    public Livro(String title, String author, String isbn) {
-        this.title = title;
-        this.author = author;
-        this.isbn = isbn;
+    public Livro(String titulo, String autor, String ISBN) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.ISBN = ISBN;
         this.exemplares = new ArrayList<>();
-        this.count = 0;
-        this.available = 0;
+        this.qtd = 0;
+        this.disponiveis = 0;
     }
 
     // Getters & Setters
-    public String getTitle() {
-        return title;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getAutor() {
+        return autor;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
-
-    public String getIsbn() {
-        return isbn;
+    
+    public String getISBN() {
+        return ISBN;
     }
 
     public List<Exemplar> getExemplares() {
@@ -52,19 +52,19 @@ public class Livro extends ItemMultimidia{
         this.exemplares = exemplares;
     }
 
-    public byte getAvailable() {
-        return available;
+    public int getDisponiveis() {
+        return disponiveis;
     }
 
-    public void setAvailable(byte available) {
-        this.available = available;
+    public void setDisponiveis(int disponiveis) {
+        this.disponiveis = disponiveis;
     }
 
-    public byte getCount() {
-        return count;
+    public int getQtd() {
+        return qtd;
     }
 
-    public void setCount(byte count) {
-        this.count = count;
+    public void setQtd(byte qtd) {
+        this.qtd = qtd;
     }
 }

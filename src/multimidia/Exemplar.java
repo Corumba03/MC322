@@ -3,13 +3,13 @@ package multimidia;
 public class Exemplar extends Livro {
     // Classe que representa um exemplar de um livro
     private String id;
-    private boolean availability;
+    private boolean available;
 
     public Exemplar(Livro livro) {
-        super(livro.getTitle(), livro.getAuthor(), livro.getIsbn());
+        super(livro.getTitulo(), livro.getAutor(), livro.getISBN());
         livro.exemplares.add(this);
-        this.id = getIsbn() + "-" + String.format("%03d", livro.exemplares.size());
-        this.availability = true;
+        this.id = getISBN() + "-" + String.format("%03d", livro.exemplares.size());
+        this.available = true;
     }
 
     public String getId() {
@@ -21,10 +21,10 @@ public class Exemplar extends Livro {
     }
 
     public boolean isAvailable() {
-        return availability;
+        return available;
     }
 
-    public void setAvailable(boolean availability) {
-        this.availability = availability;
+    public void setAvailable(boolean available) {
+        this.available = available;
     }
 }
