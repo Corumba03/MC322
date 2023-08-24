@@ -6,8 +6,6 @@ import java.util.List;
 
 public class Livro extends ItemMultimidia{
     // Classe que representa todos os livros com mesmo título, autor e ISBN
-    private String titulo;
-    private String autor;
     private final String ISBN;
     protected List<Exemplar> exemplares;
     private int qtd; // Contagem de exemplares
@@ -15,8 +13,7 @@ public class Livro extends ItemMultimidia{
 
     // Constructor
     public Livro(String titulo, String autor, String ISBN) {
-        this.titulo = titulo;
-        this.autor = autor;
+        super(titulo, autor);
         this.ISBN = ISBN;
         this.exemplares = new ArrayList<>();
         this.qtd = 0;
@@ -25,19 +22,19 @@ public class Livro extends ItemMultimidia{
 
     // Getters & Setters
     public String getTitulo() {
-        return titulo;
+        return super.getTitulo();
     }
 
     public void setTitulo(String titulo) {
-        this.titulo = titulo;
+        super.setTitulo(titulo);
     }
 
     public String getAutor() {
-        return autor;
+        return super.getAutor();
     }
 
     public void setAutor(String autor) {
-        this.autor = autor;
+        super.setAutor(autor);
     }
     
     public String getISBN() {

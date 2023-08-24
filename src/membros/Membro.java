@@ -1,7 +1,7 @@
-package pessoas;
+package membros;
 
 
-public class Membro {
+public abstract class Membro {
     // Classe que representa uma pessoa genérica, por hora sem função específica
     private String nome;
     private String cpf;

@@ -1,6 +1,6 @@
 package biblioteca;
 
-import pessoas.Membro;
+import membros.Membro;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ public class Biblioteca {
     private String inst; // Instituto
     private List<Livro> acervo;
     private List<Membro> membros;
-    private short count; // Total de livros
+    private int total; // Total de livros
 
     public Biblioteca(String nome, String inst) {
         this.nome = nome;

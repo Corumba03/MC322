@@ -1,6 +1,8 @@
-package pessoas;
+package membros.funcionarios;
 
-public class Funcionario extends Membro{
+import membros.Membro;
+
+public abstract class Funcionario extends Membro {
 
 	public Funcionario(String name, String cpf) {
 		super(name, cpf);

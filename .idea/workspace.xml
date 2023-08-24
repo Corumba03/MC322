@@ -4,14 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Versão final Lab 01">
+    <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Versão final Lab 02">
+      <change afterPath="$PROJECT_DIR$/src/membros/EstudanteGrad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/membros/EstudantePosGrad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/membros/Visitante.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/membros/funcionarios/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/membros/funcionarios/Clerk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/membros/funcionarios/Manager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/multimidia/CD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/multimidia/DVD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/multimidia/Ebook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/biblioteca/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/Biblioteca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/livro/Exemplar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/livro/Exemplar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/livro/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/livro/Livro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pessoas/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pessoas/Aluno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pessoas/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pessoas/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/Emprestimo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/Emprestimo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/multimidia/ItemMultimidia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/multimidia/ItemMultimidia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/multimidia/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/multimidia/Livro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pessoas/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/membros/Estudante.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pessoas/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/membros/funcionarios/Funcionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pessoas/Membro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/membros/Membro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +69,9 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2TiQ3qkUXOmoGwVyZEWknTVyJwR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -84,6 +97,9 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="Push.Settings">
+    <option name="SHOW_DETAILS_PANEL" value="false" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Marcelo\Unicamp/MC322(1)" />
@@ -119,6 +135,8 @@
       <workItem from="1691801782741" duration="1845000" />
       <workItem from="1691895574551" duration="868000" />
       <workItem from="1692057992241" duration="4459000" />
+      <workItem from="1692563869457" duration="675000" />
+      <workItem from="1692884400184" duration="3262000" />
     </task>
     <task id="LOCAL-00001" summary="I hate Java">
       <option name="closed" value="true" />
@@ -184,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1691896449224</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Versão final Lab 02">
+      <option name="closed" value="true" />
+      <created>1692563926175</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1692563926175</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +232,7 @@
     <MESSAGE value="I love Java" />
     <MESSAGE value="Novas classes e métodos" />
     <MESSAGE value="Versão final Lab 01" />
-    <option name="LAST_COMMIT_MESSAGE" value="Versão final Lab 01" />
+    <MESSAGE value="Versão final Lab 02" />
+    <option name="LAST_COMMIT_MESSAGE" value="Versão final Lab 02" />
   </component>
 </project>

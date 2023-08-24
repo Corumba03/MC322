@@ -1,4 +1,4 @@
-package pessoas;
+package membros;
 
 import biblioteca.Biblioteca;
 import multimidia.Exemplar;
@@ -7,12 +7,12 @@ import multimidia.Livro;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Aluno extends Membro{
+public abstract class Estudante extends Membro{
     private String ra;
     private int curso; // (pelo código)
     private List<Exemplar> material;
 
-    public Aluno(String nome, String cpf, String ra, int curso) {
+    public Estudante(String nome, String cpf, String ra, int curso) {
         super(nome, cpf);
         this.ra = ra;
         this.curso = curso;

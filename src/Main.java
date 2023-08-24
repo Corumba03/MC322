@@ -1,7 +1,8 @@
 import biblioteca.Biblioteca;
+import membros.EstudanteGrad;
 import multimidia.Exemplar;
 import multimidia.Livro;
-import pessoas.Aluno;
+import membros.Estudante;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,9 +11,9 @@ public class Main {
         Exemplar umExemplar = new Exemplar(umLivro);
 
 
-        Aluno umAluno = new Aluno("Um aluno", "100.200.300-40", "231231", 42);
-        umAluno.pegarLivro(biblioteca, umLivro);
-        System.out.println(umAluno.getMaterial().get(0).getTitulo());
+        Estudante umEstudante = new EstudanteGrad("Um aluno", "100.200.300-40", "231231", 42);
+        umEstudante.pegarLivro(biblioteca, umLivro);
+        System.out.println(umEstudante.getMaterial().get(0).getTitulo());
 
     }
 }
