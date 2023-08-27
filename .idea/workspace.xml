@@ -4,25 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Versão final Lab 02">
-      <change afterPath="$PROJECT_DIR$/src/membros/EstudanteGrad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/membros/EstudantePosGrad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/membros/Visitante.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/membros/funcionarios/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/membros/funcionarios/Clerk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/membros/funcionarios/Manager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/multimidia/CD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/multimidia/DVD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/multimidia/Ebook.java" afterDir="false" />
+    <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Começo do Lab 03">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/biblioteca/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/Biblioteca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/biblioteca/Emprestimo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/Emprestimo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/multimidia/ItemMultimidia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/multimidia/ItemMultimidia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/multimidia/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/multimidia/Livro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pessoas/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/membros/Estudante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pessoas/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/membros/funcionarios/Funcionario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pessoas/Membro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/membros/Membro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +119,7 @@
       <workItem from="1691895574551" duration="868000" />
       <workItem from="1692057992241" duration="4459000" />
       <workItem from="1692563869457" duration="675000" />
-      <workItem from="1692884400184" duration="3262000" />
+      <workItem from="1692884400184" duration="4173000" />
     </task>
     <task id="LOCAL-00001" summary="I hate Java">
       <option name="closed" value="true" />
@@ -210,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692563926175</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Começo do Lab 03">
+      <option name="closed" value="true" />
+      <created>1692888702637</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1692888702637</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +224,7 @@
     <MESSAGE value="Novas classes e métodos" />
     <MESSAGE value="Versão final Lab 01" />
     <MESSAGE value="Versão final Lab 02" />
-    <option name="LAST_COMMIT_MESSAGE" value="Versão final Lab 02" />
+    <MESSAGE value="Começo do Lab 03" />
+    <option name="LAST_COMMIT_MESSAGE" value="Começo do Lab 03" />
   </component>
 </project>
