@@ -1,14 +1,14 @@
 package multimidia;
 
-public class Exemplar extends Livro {
+public class ExemplarLivro extends Livro {
     // Classe que representa um exemplar de um livro
     private String id;
     private boolean available;
 
-    public Exemplar(Livro livro) {
+    public ExemplarLivro(Livro livro) {
         super(livro.getTitulo(), livro.getAutor(), livro.getISBN());
-        livro.exemplares.add(this);
-        this.id = getISBN() + "-" + String.format("%03d", livro.exemplares.size());
+        livro.exemplaresLivro.add(this);
+        this.id = getISBN() + "-" + String.format("%03d", livro.exemplaresLivro.size());
         this.available = true;
     }
 
