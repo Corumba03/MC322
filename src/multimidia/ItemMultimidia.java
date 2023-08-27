@@ -1,12 +1,15 @@
 package multimidia;
 
+import java.util.List;
 import java.util.UUID;
 
 public abstract class ItemMultimidia {
     private String titulo;
     private String autor;
-
     private String tombo;
+    protected List<ExemplarMultimidia> exemplaresMultimidia;
+    private int qtd; // Contagem de exemplares
+    private int disponiveis; // Contagem de exemplares disponíveis
 
     public ItemMultimidia(String titulo, String autor) {
         this.titulo = titulo;
@@ -37,4 +40,29 @@ public abstract class ItemMultimidia {
     public void setTombo(String tombo) {
         this.tombo = tombo;
     }
+
+	public List<ExemplarMultimidia> getExemplaresMultimidia() {
+		return exemplaresMultimidia;
+	}
+
+	public void setExemplares(List<ExemplarMultimidia> exemplaresMultimidia) {
+		this.exemplaresMultimidia = exemplaresMultimidia;
+	}
+
+	public int getQtd() {
+		return qtd;
+	}
+
+	public void setQtd(int qtd) {
+		this.qtd = qtd;
+	}
+
+	public int getDisponiveis() {
+		return disponiveis;
+	}
+
+	public void setDisponiveis(int disponiveis) {
+		this.disponiveis = disponiveis;
+	}
+    
 }

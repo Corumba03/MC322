@@ -1,7 +1,7 @@
 package membros;
 
 import biblioteca.Biblioteca;
-import multimidia.Exemplar;
+import multimidia.ExemplarLivro;
 import multimidia.Livro;
 
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import java.util.List;
 public abstract class Estudante extends Membro{
     private String ra;
     private int curso; // (pelo código)
-    private List<Exemplar> material;
+    private List<ExemplarLivro> material;
 
     public Estudante(String nome, String cpf, String ra, int curso) {
         super(nome, cpf);
@@ -35,19 +35,19 @@ public abstract class Estudante extends Membro{
         this.curso = curso;
     }
 
-    public List<Exemplar> getMaterial() {
+    public List<ExemplarLivro> getMaterial() {
         return material;
     }
 
-    public void setMaterial(List<Exemplar> material) {
+    public void setMaterial(List<ExemplarLivro> material) {
         this.material = material;
     }
     // Função para pegar um livro emprestado. (por hora sem exception handling)
     public void pegarLivro(Biblioteca biblioteca, Livro livro){
-        for (int i = 0; i < livro.getExemplares().size(); i++){
-            if (livro.getExemplares().get(i).isAvailable()){
-                this.material.add(livro.getExemplares().get(i));
-                livro.getExemplares().get(i).setAvailable(false);
+        for (int i = 0; i < livro.getExemplaresLivro().size(); i++){
+            if (livro.getExemplaresLivro().get(i).isAvailable()){
+                this.material.add(livro.getExemplaresLivro().get(i));
+                livro.getExemplaresLivro().get(i).setAvailable(false);
             }
         }
     }
