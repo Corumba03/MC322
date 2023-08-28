@@ -5,13 +5,14 @@ import membros.Membro;
 import java.util.ArrayList;
 import java.util.List;
 
-import multimidia.Livro;
+import multimidia.ItemMultimidia;
+
 
 public class Biblioteca {
     // Classe que representa uma biblioteca
     private String nome;
     private String inst; // Instituto
-    private List<Livro> acervo;
+    private List<ItemMultimidia> acervo;
     private List<Membro> membros;
     private int total; // Total de livros
 
@@ -39,11 +40,11 @@ public class Biblioteca {
         this.inst = inst;
     }
 
-    public List<Livro> getAcervo() {
+    public List<ItemMultimidia> getAcervo() {
         return acervo;
     }
 
-    public void setAcervo(List<Livro> acervo) {
+    public void setAcervo(List<ItemMultimidia> acervo) {
         this.acervo = acervo;
     }
 
@@ -65,6 +66,10 @@ public class Biblioteca {
 
     private void updateCount(){
         this.total = acervo.size();
+    }
+    
+    public void addItem(ItemMultimidia item){
+        this.acervo.add(item);
     }
 
 }
