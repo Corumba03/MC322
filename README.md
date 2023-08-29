@@ -1,7 +1,7 @@
 # MC322
-Apenas um repositório de projetos de MC322
+Projeto de sistema de biblioteca universtária
 
 
 ## Membros (dupla)
-Octávio Nascimento - 241327
+Octávio Nascimento - 241327 \n
 Marcelo S. C. de Campos - 236730
