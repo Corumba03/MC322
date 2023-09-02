@@ -6,7 +6,7 @@ public class ExemplarLivro extends Livro {
     private boolean available;
 
     public ExemplarLivro(Livro livro) {
-        super(livro.getTitulo(), livro.getAutor(), livro.getISBN());
+        super(livro.getTitulo(), livro.getAutor(), livro.getISBN(), livro.getEstadoConservacao());
         livro.exemplaresLivro.add(this);
         this.id = getISBN() + "-" + String.format("%03d", livro.exemplaresLivro.size());
         this.available = true;
@@ -27,4 +27,5 @@ public class ExemplarLivro extends Livro {
     public void setAvailable(boolean available) {
         this.available = available;
     }
+    
 }
