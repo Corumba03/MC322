@@ -1,0 +1,302 @@
+Index: src/biblioteca/Emprestimo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package biblioteca;\r\n\r\nimport membros.Membro;\r\nimport membros.funcionarios.Funcionario;\r\nimport multimidia.ItemMultimidia;\r\n\r\n\r\nimport java.time.LocalDate;\r\n\r\n\r\n\r\npublic class Emprestimo {\r\n    private Funcionario operador; // Quem realizou o empréstimo\r\n    private Membro dono; // Quem pediu o empréstimo\r\n    private ItemMultimidia item; // Item sendo emprestado\r\n    private LocalDate criacao; // Data de criação\r\n    private LocalDate deadline; // Data limite\r\n    private int extensionsCount; // Quantidade de extensões de deadline realizadas\r\n    private RenovacaoReserva[] extensions; // Extensões realizadas\r\n\r\n    public Emprestimo(Membro dono, Funcionario operador, int dias, ItemMultimidia item) {\r\n        this.dono = dono;\r\n        this.operador = operador;\r\n        this.criacao = LocalDate.now()   ;\r\n        this.deadline = criacao.plusDays(dias);\r\n        this.item = item;\r\n        this.extensionsCount = 0;\r\n        this.extensions = new RenovacaoReserva[0];\r\n    }\r\n\r\n    public Membro getDono() {\r\n        return dono;\r\n    }\r\n\r\n    public void setDono(Membro dono) {\r\n        this.dono = dono;\r\n    }\r\n\r\n    public LocalDate getCriacao() {\r\n        return criacao;\r\n    }\r\n\r\n    public void setCriacao(LocalDate criacao) {\r\n        this.criacao = criacao;\r\n    }\r\n\r\n    public LocalDate getDeadline() {\r\n        return deadline;\r\n    }\r\n\r\n    public void setDeadline(LocalDate deadline) {\r\n        this.deadline = deadline;\r\n    }\r\n\r\n    public int getExtensionsCount() {\r\n        return extensionsCount;\r\n    }\r\n\r\n    public void setExtensionsCount(int extensionsCount) {\r\n        this.extensionsCount = extensionsCount;\r\n    }\r\n\r\n    public Funcionario getOperador() {\r\n        return operador;\r\n    }\r\n\r\n    public void setOperador(Funcionario operador) {\r\n        this.operador = operador;\r\n    }\r\n\r\n    public ItemMultimidia getItem() {\r\n        return item;\r\n    }\r\n\r\n    public void setItem(ItemMultimidia item) {\r\n        this.item = item;\r\n    }\r\n\r\n    public RenovacaoReserva[] getExtensions() {\r\n        return extensions;\r\n    }\r\n\r\n    public void setExtensions(RenovacaoReserva[] extensions) {\r\n        this.extensions = extensions;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/biblioteca/Emprestimo.java b/src/biblioteca/Emprestimo.java
+--- a/src/biblioteca/Emprestimo.java	
++++ b/src/biblioteca/Emprestimo.java	
+@@ -18,11 +18,11 @@
+     private int extensionsCount; // Quantidade de extensões de deadline realizadas
+     private RenovacaoReserva[] extensions; // Extensões realizadas
+ 
+-    public Emprestimo(Membro dono, Funcionario operador, int dias, ItemMultimidia item) {
++    public Emprestimo(Membro dono, Funcionario operador, ItemMultimidia item) {
+         this.dono = dono;
+         this.operador = operador;
+         this.criacao = LocalDate.now()   ;
+-        this.deadline = criacao.plusDays(dias);
++        this.deadline = criacao.plusDays(dono.getPrazoEmprestimo());
+         this.item = item;
+         this.extensionsCount = 0;
+         this.extensions = new RenovacaoReserva[0];
+Index: src/biblioteca/Relatorio.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/biblioteca/Relatorio.java b/src/biblioteca/relatorios/Relatorio.java
+rename from src/biblioteca/Relatorio.java
+rename to src/biblioteca/relatorios/Relatorio.java
+--- a/src/biblioteca/Relatorio.java	
++++ b/src/biblioteca/relatorios/Relatorio.java	
+@@ -1,4 +1,4 @@
+-package biblioteca;
++package biblioteca.relatorios;
+ 
+ public class Relatorio {
+ 
+Index: src/membros/Professor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/membros/Professor.java b/src/membros/universitario/Professor.java
+rename from src/membros/Professor.java
+rename to src/membros/universitario/Professor.java
+--- a/src/membros/Professor.java	
++++ b/src/membros/universitario/Professor.java	
+@@ -1,16 +1,17 @@
+-package membros;
++package membros.universitario;
+ 
+-import java.util.ArrayList;
+-
+-public class Professor extends Membro{
++public class Professor extends Universitario{
+ 	private String instituto;
+ 	private String titulo; //Ex: Professor Doutor I
+-	
+-    public Professor(String nome, String cpf, String instituto, String titulo) {
+-        super(nome, cpf);
+-        this.instituto = instituto;
+-        this.titulo = titulo;
+-    }
++
++	public Professor(String nome, String endereco, String niu, String instituto, String titulo) {
++		super(nome, endereco, niu);
++		this.instituto = instituto;
++		this.titulo = titulo;
++		this.setLimiteEmprestimo(7);
++		this.setPrazoEmprestimo(30);
++		this.setMultaAtraso(0.5);
++	}
+ 
+ 	public String getInstituto() {
+ 		return instituto;
+Index: src/membros/funcionarios/Atendente.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package membros.funcionarios;\r\n\r\nimport biblioteca.Emprestimo;\r\nimport membros.Membro;\r\nimport multimidia.ItemMultimidia;\r\n\r\npublic class Atendente extends Funcionario {\r\n\tprivate String gestor; //ID do gerente responsável\r\n\tpublic static final int nivelAcesso = 2;\r\n\t\r\n    public Atendente(String name, String cpf, String ID, String gestor) {\r\n        super(name, cpf, ID);\r\n        this.gestor = gestor;\r\n    }\r\n\r\n\tpublic String getGestor() {\r\n\t\treturn gestor;\r\n\t}\r\n\r\n\tpublic void setGestor(String gestor) {\r\n\t\tthis.gestor = gestor;\r\n\t}\r\n\r\n\tpublic int getNivelAcesso() {\r\n\t\treturn nivelAcesso;\r\n\t}\r\n\r\n\tpublic void emprestar(Membro membro, ItemMultimidia item, int dias){\r\n\t\tEmprestimo novoEmprestimo = new Emprestimo(membro, this, dias, item);\r\n\t\tmembro.retirarItem(novoEmprestimo);\r\n\t}\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/membros/funcionarios/Atendente.java b/src/membros/funcionarios/Atendente.java
+--- a/src/membros/funcionarios/Atendente.java	
++++ b/src/membros/funcionarios/Atendente.java	
+@@ -25,8 +25,4 @@
+ 		return nivelAcesso;
+ 	}
+ 
+-	public void emprestar(Membro membro, ItemMultimidia item, int dias){
+-		Emprestimo novoEmprestimo = new Emprestimo(membro, this, dias, item);
+-		membro.retirarItem(novoEmprestimo);
+-	}
+ }
+Index: src/membros/Membro.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package membros;\r\nimport biblioteca.Emprestimo;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\n\r\n\r\npublic abstract class Membro {\r\n    // Classe que representa uma pessoa genérica, por hora sem função específica\r\n    private String nome;\r\n    private String cpf;\r\n    private List<Emprestimo> emprestimos;  // Lista de empréstimos\r\n    public Membro(String nome, String cpf) {\r\n        this.nome = nome;\r\n        this.cpf = cpf;\r\n        this.emprestimos = new ArrayList<>();\r\n    }\r\n\r\n    public String getNome() {\r\n        return nome;\r\n    }\r\n\r\n    public void setNome(String nome) {\r\n        this.nome = nome;\r\n    }\r\n\r\n    public String getCpf() {\r\n        return cpf;\r\n    }\r\n\r\n    public void setCpf(String cpf) {\r\n        this.cpf = cpf;\r\n    }\r\n\r\n    public List<Emprestimo> getEmprestimos() {\r\n        return emprestimos;\r\n    }\r\n\r\n    public void setEmprestimos(List<Emprestimo> emprestimos) {\r\n        this.emprestimos = emprestimos;\r\n    }\r\n\r\n    public void retirarItem(Emprestimo emprestimo){\r\n        this.emprestimos.add(emprestimo);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/membros/Membro.java b/src/membros/Membro.java
+--- a/src/membros/Membro.java	
++++ b/src/membros/Membro.java	
+@@ -1,5 +1,4 @@
+ package membros;
+-import biblioteca.Emprestimo;
+ 
+ import java.util.ArrayList;
+ import java.util.List;
+@@ -8,12 +7,19 @@
+ public abstract class Membro {
+     // Classe que representa uma pessoa genérica, por hora sem função específica
+     private String nome;
+-    private String cpf;
+-    private List<Emprestimo> emprestimos;  // Lista de empréstimos
+-    public Membro(String nome, String cpf) {
++    private String endereco;
++    private List<String> contatos; // Lista com telefones, e-mails, etc
++    private int limiteEmprestimo; // Limite de empréstimos
++    private int prazoEmprestimo; // Prazo limite para empréstimos
++    private double multaAtraso;
++
++    public Membro(String nome, String endereco) {
+         this.nome = nome;
+-        this.cpf = cpf;
+-        this.emprestimos = new ArrayList<>();
++        this.endereco = endereco;
++        this.contatos = new ArrayList<>();
++        this.limiteEmprestimo = 1;
++        this.prazoEmprestimo = 1;
++        this.multaAtraso = 1;
+     }
+ 
+     public String getNome() {
+@@ -24,23 +30,47 @@
+         this.nome = nome;
+     }
+ 
+-    public String getCpf() {
+-        return cpf;
++    public String getEndereco() {
++        return endereco;
++    }
++
++    public void setEndereco(String endereco) {
++        this.endereco = endereco;
++    }
++
++    public List<String> getContatos() {
++        return contatos;
++    }
++
++    public void setContatos(List<String> contato) {
++        this.contatos = contato;
++    }
++
++    public void addContato(String contato){
++        this.contatos.add(contato);
++    }
++
++    public int getLimiteEmprestimo() {
++        return limiteEmprestimo;
+     }
+ 
+-    public void setCpf(String cpf) {
+-        this.cpf = cpf;
++    public void setLimiteEmprestimo(int limiteEmprestimo) {
++        this.limiteEmprestimo = limiteEmprestimo;
+     }
+ 
+-    public List<Emprestimo> getEmprestimos() {
+-        return emprestimos;
++    public int getPrazoEmprestimo() {
++        return prazoEmprestimo;
+     }
+ 
+-    public void setEmprestimos(List<Emprestimo> emprestimos) {
+-        this.emprestimos = emprestimos;
++    public void setPrazoEmprestimo(int prazoEmprestimo) {
++        this.prazoEmprestimo = prazoEmprestimo;
+     }
+ 
+-    public void retirarItem(Emprestimo emprestimo){
+-        this.emprestimos.add(emprestimo);
++    public double getMultaAtraso() {
++        return multaAtraso;
++    }
++
++    public void setMultaAtraso(double multaAtraso) {
++        this.multaAtraso = multaAtraso;
+     }
+ }
+Index: src/membros/EstudanteGrad.java
+===================================================================
+diff --git a/src/membros/EstudanteGrad.java b/src/membros/EstudanteGrad.java
+deleted file mode 100644
+--- a/src/membros/EstudanteGrad.java	
++++ /dev/null	
+@@ -1,7 +0,0 @@
+-package membros;
+-
+-public class EstudanteGrad extends Estudante{
+-    public EstudanteGrad(String nome, String cpf, String ra, int curso) {
+-        super(nome, cpf, ra, curso);
+-    }
+-}
+Index: src/membros/Estudante.java
+===================================================================
+diff --git a/src/membros/Estudante.java b/src/membros/Estudante.java
+deleted file mode 100644
+--- a/src/membros/Estudante.java	
++++ /dev/null	
+@@ -1,54 +0,0 @@
+-package membros;
+-
+-import biblioteca.Biblioteca;
+-import multimidia.ExemplarLivro;
+-import multimidia.Livro;
+-
+-import java.util.ArrayList;
+-import java.util.List;
+-
+-public abstract class Estudante extends Membro{
+-    private String ra;
+-    private int curso; // (pelo código)
+-    private List<ExemplarLivro> material;
+-
+-    public Estudante(String nome, String cpf, String ra, int curso) {
+-        super(nome, cpf);
+-        this.ra = ra;
+-        this.curso = curso;
+-        this.material = new ArrayList<>();
+-    }
+-
+-    public String getRa() {
+-        return ra;
+-    }
+-
+-    public void setRa(String ra) {
+-        this.ra = ra;
+-    }
+-
+-    public int getCurso() {
+-        return curso;
+-    }
+-
+-    public void setCurso(int curso) {
+-        this.curso = curso;
+-    }
+-
+-    public List<ExemplarLivro> getMaterial() {
+-        return material;
+-    }
+-
+-    public void setMaterial(List<ExemplarLivro> material) {
+-        this.material = material;
+-    }
+-    // Função para pegar um livro emprestado. (por hora sem exception handling)
+-    public void pegarLivro(Biblioteca biblioteca, Livro livro){
+-        for (int i = 0; i < livro.getExemplaresLivro().size(); i++){
+-            if (livro.getExemplaresLivro().get(i).isAvailable()){
+-                this.material.add(livro.getExemplaresLivro().get(i));
+-                livro.getExemplaresLivro().get(i).setAvailable(false);
+-            }
+-        }
+-    }
+-}
+Index: src/membros/EstudantePosGrad.java
+===================================================================
+diff --git a/src/membros/EstudantePosGrad.java b/src/membros/EstudantePosGrad.java
+deleted file mode 100644
+--- a/src/membros/EstudantePosGrad.java	
++++ /dev/null	
+@@ -1,7 +0,0 @@
+-package membros;
+-
+-public class EstudantePosGrad extends Estudante{
+-    public EstudantePosGrad(String nome, String cpf, String ra, int curso) {
+-        super(nome, cpf, ra, curso);
+-    }
+-}
+Index: src/membros/Visitante.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package membros;\r\n\r\npublic class Visitante extends Membro{\r\n    public Visitante(String nome, String cpf) {\r\n        super(nome, cpf);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/membros/Visitante.java b/src/membros/Visitante.java
+--- a/src/membros/Visitante.java	
++++ b/src/membros/Visitante.java	
+@@ -3,5 +3,6 @@
+ public class Visitante extends Membro{
+     public Visitante(String nome, String cpf) {
+         super(nome, cpf);
++        this.setLimiteEmprestimo(1);
+     }
+ }

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Agregação e associação melhor definidas, adição de alguns getters e setters">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/membros/Estudante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/membros/Universitario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/membros/EstudanteGrad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/membros/EstudanteGrad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/membros/EstudantePosGrad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/membros/EstudantePosGrad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/membros/Membro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/membros/Membro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/membros/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/membros/Professor.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Corumba03&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="125f271e-2b91-4010-9bd4-9d5dcbc83a3f" />
+        <option name="url" value="https://github.com/Corumba03/MC322.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2TiQ3qkUXOmoGwVyZEWknTVyJwR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "marcelo",
+    "last_opened_file_path": "D:/Marcelo/Unicamp/MC322(1)/MC322",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "D:/Marcelo/Unicamp/MC322/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Errors",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="Push.Settings">
+    <option name="SHOW_DETAILS_PANEL" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Marcelo\Unicamp/MC322(1)" />
+      <recent name="D:\Marcelo\Unicamp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="20" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="MC322" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="" />
+      <created>1691523226466</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691523226466</updated>
+      <workItem from="1691523227388" duration="3424000" />
+      <workItem from="1691543339712" duration="50000" />
+      <workItem from="1691543399881" duration="450000" />
+      <workItem from="1691543854582" duration="367000" />
+      <workItem from="1691544235918" duration="1236000" />
+      <workItem from="1691603413198" duration="5037000" />
+      <workItem from="1691705276714" duration="5809000" />
+      <workItem from="1691801782741" duration="1845000" />
+      <workItem from="1691895574551" duration="868000" />
+      <workItem from="1692057992241" duration="4459000" />
+      <workItem from="1692563869457" duration="675000" />
+      <workItem from="1692884400184" duration="4173000" />
+      <workItem from="1693178960264" duration="3588000" />
+      <workItem from="1693266738371" duration="2777000" />
+    </task>
+    <task id="LOCAL-00001" summary="I hate Java">
+      <option name="closed" value="true" />
+      <created>1691523396134</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1691523396134</updated>
+    </task>
+    <task id="LOCAL-00002" summary="I hate Java">
+      <option name="closed" value="true" />
+      <created>1691523973696</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1691523973696</updated>
+    </task>
+    <task id="LOCAL-00003" summary="I hate Java">
+      <option name="closed" value="true" />
+      <created>1691542649756</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1691542649756</updated>
+    </task>
+    <task id="LOCAL-00004" summary="I love Java">
+      <option name="closed" value="true" />
+      <created>1691545443340</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1691545443340</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Novas classes e métodos">
+      <option name="closed" value="true" />
+      <created>1691608482446</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1691608482446</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Novas classes e métodos">
+      <option name="closed" value="true" />
+      <created>1691711207292</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1691711207292</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Novas classes e métodos">
+      <option name="closed" value="true" />
+      <created>1691711223657</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1691711223657</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Versão final Lab 01">
+      <option name="closed" value="true" />
+      <created>1691896449224</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1691896449224</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Versão final Lab 02">
+      <option name="closed" value="true" />
+      <created>1692563926175</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1692563926175</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Começo do Lab 03">
+      <option name="closed" value="true" />
+      <created>1692888702637</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1692888702637</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Começo do Lab 03">
+      <option name="closed" value="true" />
+      <created>1693179069885</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1693179069885</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Agregação e associação melhor definidas, adição de alguns getters e setters">
+      <option name="closed" value="true" />
+      <created>1693182562077</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1693182562077</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="I hate Java" />
+    <MESSAGE value="I love Java" />
+    <MESSAGE value="Novas classes e métodos" />
+    <MESSAGE value="Versão final Lab 01" />
+    <MESSAGE value="Versão final Lab 02" />
+    <MESSAGE value="Começo do Lab 03" />
+    <MESSAGE value="Agregação e associação melhor definidas, adição de alguns getters e setters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregação e associação melhor definidas, adição de alguns getters e setters" />
+  </component>
+</project>
