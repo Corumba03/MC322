@@ -7,14 +7,14 @@ import java.time.Duration;
 public class CD extends ItemMultimidia {
 	private List<String> faixas;
 	private Duration duracaoTotal; // Em segundos
-    private int totalCopias; // Contagem de cópias
-    private int disponiveis; // Contagem de exemplares disponíveis
+    private static int totalCopias; // Contagem de cópias
+    private static int disponiveis; // Contagem de exemplares disponíveis
     private int estadoConservacao; // Varia de 0 a 2, sendo 0 novo, 1 conservado e 2 danificado
 	
     public CD(String titulo, String autor, Duration duracaoTotal, int estadoConservacao) {
         super(titulo, autor);
-        this.totalCopias = 0; // Número total de cópias por edição
-        this.disponiveis = 0; // Número de cópias disponíveis por edição
+        totalCopias = 0; // Número total de cópias por edição
+        disponiveis = 0; // Número de cópias disponíveis por edição
         this.duracaoTotal = duracaoTotal;
         this.faixas = new ArrayList<>();
         if (estadoConservacao > 2 || estadoConservacao < 0) {
@@ -49,7 +49,7 @@ public class CD extends ItemMultimidia {
 
 
 	public void setTotalCopias(int totalCopias) {
-		this.totalCopias = totalCopias;
+		CD.totalCopias = totalCopias;
 	}
 
 
@@ -59,7 +59,7 @@ public class CD extends ItemMultimidia {
 
 
 	public void setDisponiveis(int disponiveis) {
-		this.disponiveis = disponiveis;
+		CD.disponiveis = disponiveis;
 	}
 
 

@@ -1,31 +1,27 @@
 package biblioteca;
 
 import membros.Membro;
-import membros.funcionarios.Funcionario;
 import multimidia.ItemMultimidia;
 
 
 import java.time.LocalDate;
 
 
-
 public class Emprestimo {
-    private Funcionario operador; // Quem realizou o empréstimo
     private Membro dono; // Quem pediu o empréstimo
     private ItemMultimidia item; // Item sendo emprestado
     private LocalDate criacao; // Data de criação
     private LocalDate deadline; // Data limite
     private int extensionsCount; // Quantidade de extensões de deadline realizadas
-    private RenovacaoReserva[] extensions; // Extensões realizadas
+    private Reserva[] extensions; // Extensões realizadas
 
-    public Emprestimo(Membro dono, Funcionario operador, int dias, ItemMultimidia item) {
+    public Emprestimo(Membro dono, ItemMultimidia item) {
         this.dono = dono;
-        this.operador = operador;
         this.criacao = LocalDate.now()   ;
-        this.deadline = criacao.plusDays(dias);
+        this.deadline = criacao.plusDays(dono.getPrazoEmprestimo());
         this.item = item;
         this.extensionsCount = 0;
-        this.extensions = new RenovacaoReserva[0];
+        this.extensions = new Reserva[0];
     }
 
     public Membro getDono() {
@@ -60,14 +56,6 @@ public class Emprestimo {
         this.extensionsCount = extensionsCount;
     }
 
-    public Funcionario getOperador() {
-        return operador;
-    }
-
-    public void setOperador(Funcionario operador) {
-        this.operador = operador;
-    }
-
     public ItemMultimidia getItem() {
         return item;
     }
@@ -76,11 +64,11 @@ public class Emprestimo {
         this.item = item;
     }
 
-    public RenovacaoReserva[] getExtensions() {
+    public Reserva[] getExtensions() {
         return extensions;
     }
 
-    public void setExtensions(RenovacaoReserva[] extensions) {
+    public void setExtensions(Reserva[] extensions) {
         this.extensions = extensions;
     }
 }

@@ -1,6 +1,9 @@
 package membros;
-import biblioteca.Emprestimo;
 
+import biblioteca.Emprestimo;
+import multimidia.ItemMultimidia;
+
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,12 +11,24 @@ import java.util.List;
 public abstract class Membro {
     // Classe que representa uma pessoa genérica, por hora sem função específica
     private String nome;
-    private String cpf;
-    private List<Emprestimo> emprestimos;  // Lista de empréstimos
-    public Membro(String nome, String cpf) {
+    private String endereco;
+    private List<String> contatos; // Lista com telefones, e-mails, etc
+    private final LocalDate dataRegistro; // Data de registro
+    private int limiteEmprestimo; // Limite de empréstimos
+    private int prazoEmprestimo; // Prazo limite para empréstimos
+    private double multa;
+    private List<Emprestimo> emprestimos;
+
+    public Membro(String nome, String endereco, String contato) {
         this.nome = nome;
-        this.cpf = cpf;
+        this.endereco = endereco;
+        this.contatos = new ArrayList<>();
+        this.contatos.add(contato);
+        this.dataRegistro = LocalDate.now();
         this.emprestimos = new ArrayList<>();
+        this.limiteEmprestimo = 1;
+        this.prazoEmprestimo = 1;
+        this.multa = 1;
     }
 
     public String getNome() {
@@ -24,12 +39,52 @@ public abstract class Membro {
         this.nome = nome;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public List<String> getContatos() {
+        return contatos;
+    }
+
+    public void setContatos(List<String> contato) {
+        this.contatos = contato;
+    }
+
+    public void addContato(String contato){
+        this.contatos.add(contato);
+    }
+
+    public int getLimiteEmprestimo() {
+        return limiteEmprestimo;
+    }
+
+    public void setLimiteEmprestimo(int limiteEmprestimo) {
+        this.limiteEmprestimo = limiteEmprestimo;
+    }
+
+    public int getPrazoEmprestimo() {
+        return prazoEmprestimo;
+    }
+
+    public void setPrazoEmprestimo(int prazoEmprestimo) {
+        this.prazoEmprestimo = prazoEmprestimo;
+    }
+
+    public double getMulta() {
+        return multa;
+    }
+
+    public void setMulta(double multa) {
+        this.multa = multa;
+    }
+
+    public LocalDate getDataRegistro() {
+        return dataRegistro;
     }
 
     public List<Emprestimo> getEmprestimos() {
@@ -40,7 +95,41 @@ public abstract class Membro {
         this.emprestimos = emprestimos;
     }
 
-    public void retirarItem(Emprestimo emprestimo){
-        this.emprestimos.add(emprestimo);
+    public void fazerEmprestimo(ItemMultimidia item){
+        // Primeiramente checa se o usuário pode realizar mais empréstimos
+        if (this.getEmprestimos().size() >= this.getLimiteEmprestimo()){
+            System.out.println("Limite de emprestimos atingido.");
+            return;
+        }
+        int k = 0;
+        // Acha um exemplar disponível
+        if (item.getDisponiveis() > 0){
+            for (int i = 0; i < item.getDisponiveis(); i++){
+                if (item.getExemplaresMultimidia().get(i).isAvailable()){
+
+                    k = i;
+                    break;
+                }
+            }
+        } else{
+            System.out.println("Nenhum exemplar disponível no momento, porém é possível reservar o item para quando estiver disponível.");
+            return;
+        }
+        // Cria um formulário de empréstimo
+        Emprestimo novoEmprestimo = new Emprestimo(this, item.getExemplaresMultimidia().get(k));
+        this.emprestimos.add(novoEmprestimo);
+        item.getExemplaresMultimidia().get(k).setAvailable(false);
+    }
+
+    public void renovarEmprestimo(Emprestimo emprestimo){
+        if (!this.emprestimos.contains(emprestimo)){
+            System.out.println("O empréstimo requisitado não existe ou não pertence ao usuário.");
+            return;
+        }
+        if (emprestimo.getDeadline().isAfter(LocalDate.now())){
+            System.out.println("Data limite para o empréstimo já excedida, acerte quaisquer multas relacionadas antes de renovar o empréstimo.");
+        } else {
+            emprestimo.setDeadline(emprestimo.getDeadline().plusDays(this.prazoEmprestimo));
+        }
     }
 }
