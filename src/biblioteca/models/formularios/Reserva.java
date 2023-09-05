@@ -1,4 +1,7 @@
-package biblioteca.models;
+package biblioteca.models.formularios;
+
+import biblioteca.models.membros.Membro;
+import biblioteca.models.multimidia.ItemMultimidia;
 
 import java.time.LocalDate;
 

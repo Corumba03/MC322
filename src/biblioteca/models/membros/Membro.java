@@ -1,6 +1,6 @@
 package biblioteca.models.membros;
 
-import biblioteca.models.Emprestimo;
+import biblioteca.models.formularios.Emprestimo;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

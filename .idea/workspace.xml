@@ -4,16 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Implementação dos pontos 2 e 3 (e um pouco do 6) do lab 04">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_08_2023_20_34_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_27_08_2023_20_34__Changes_.xml" beforeDir="false" />
+    <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Mais coisas para o Lab 04">
+      <change afterPath="$PROJECT_DIR$/src/biblioteca/models/formularios/Devolucao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/biblioteca/relatorios/RelatorioDisponibilidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/relatorios/RelatorioDisponibilidade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/multimidia/Ebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/multimidia/Ebook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/multimidia/ExemplarLivro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/multimidia/ExemplarMultimidia.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/multimidia/ItemMultimidia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/multimidia/ItemMultimidia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/multimidia/Livro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/multimidia/LivroFisico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/Emprestimo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/formularios/Emprestimo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/formularios/Reserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/membros/Membro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/membros/Membro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/relatorios/Relatorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/relatorios/Relatorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/relatorios/RelatorioAtividade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/relatorios/RelatorioAtividade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/relatorios/RelatorioUso.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/relatorios/RelatorioUso.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +73,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Marcelo/Unicamp/MC322(1)/MC322&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Marcelo/Unicamp/MC322(1)/MC322/src&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -92,6 +91,10 @@
     <option name="SHOW_DETAILS_PANEL" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Marcelo\Unicamp\MC322(1)\MC322\src" />
+      <recent name="D:\Marcelo\Unicamp\MC322(1)\MC322\src\biblioteca" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Marcelo\Unicamp/MC322(1)" />
       <recent name="D:\Marcelo\Unicamp" />
@@ -133,7 +136,8 @@
       <workItem from="1693749567354" duration="2746000" />
       <workItem from="1693769212876" duration="301000" />
       <workItem from="1693783503236" duration="7087000" />
-      <workItem from="1693871347418" duration="3642000" />
+      <workItem from="1693871347418" duration="7196000" />
+      <workItem from="1693924050614" duration="3710000" />
     </task>
     <task id="LOCAL-00001" summary="I hate Java">
       <option name="closed" value="true" />
@@ -231,7 +235,23 @@
       <option name="project" value="LOCAL" />
       <updated>1693792071195</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Mais coisas para o Lab 04">
+      <option name="closed" value="true" />
+      <created>1693878536158</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1693878536158</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Mais coisas para o Lab 04">
+      <option name="closed" value="true" />
+      <created>1693883338083</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1693883338083</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +277,7 @@
     <MESSAGE value="Começo do Lab 03" />
     <MESSAGE value="Implementação dos pontos 2 e 3 do lab 04" />
     <MESSAGE value="Implementação dos pontos 2 e 3 (e um pouco do 6) do lab 04" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementação dos pontos 2 e 3 (e um pouco do 6) do lab 04" />
+    <MESSAGE value="Mais coisas para o Lab 04" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mais coisas para o Lab 04" />
   </component>
 </project>

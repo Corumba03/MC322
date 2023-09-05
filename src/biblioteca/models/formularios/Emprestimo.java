@@ -1,4 +1,4 @@
-package biblioteca.models;
+package biblioteca.models.formularios;
 
 import biblioteca.models.membros.Membro;
 import biblioteca.models.multimidia.ItemMultimidia;
@@ -12,6 +12,7 @@ public class Emprestimo {
     private ItemMultimidia item; // Item sendo emprestado
     private LocalDate criacao; // Data de criação
     private LocalDate prazo; // Data limite
+    private boolean ativo; // Uma marca para indicar que o empréstimo ainda está ativo/pendente
 
     public Emprestimo(Membro dono, ItemMultimidia item) {
         this.dono = dono;
