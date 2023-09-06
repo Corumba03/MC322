@@ -13,8 +13,8 @@ public class DVD extends ItemMultimidia {
     
     public DVD(String titulo, String autor, Duration duracaoTotal, int estadoConservacao) {
         super(titulo, autor);
-        totalCopias = 0; // Número total de cópias por edição
-        disponiveis = 0; // Número de cópias disponíveis por edição
+        totalCopias = getTotalCopias() + 1; // Número total de cópias por edição
+        disponiveis = getDisponiveis() + 1; // Número de cópias disponíveis por edição
         this.duracaoTotal = duracaoTotal;
         this.elenco = new ArrayList<>();
         if (estadoConservacao > 2 || estadoConservacao < 0) {

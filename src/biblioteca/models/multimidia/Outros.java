@@ -15,8 +15,8 @@ public class Outros extends ItemMultimidia{
     	this.localizacao = localizacao;
     	this.tipoRecurso = tipoRecurso;
         this.formato = formato;
-        total = 0; // Número total de cópias por edição
-        disponiveis = 0; // Número de cópias disponíveis por edição
+        total = getTotal() + 1; // Número total de cópias por edição
+        disponiveis = getDisponiveis() + 1; // Número de cópias disponíveis por edição
         if (estadoConservacao > 2 || estadoConservacao < 0) {
         	System.out.println("Opção de estado de conservação inválida, insira um número de 0 a 2, sendo:"
         			+ "0: novo, 1: usado e 2: danificado.");}

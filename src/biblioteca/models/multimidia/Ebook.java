@@ -10,17 +10,18 @@ public class Ebook extends LivroFisico {
     private String url;
     private String requisitosLeitura; // Software, dispositivo compatível
     private LocalDate dataDisponibilidade;
-    
-    public Ebook(String titulo, String autor, String ISBN, double tamanho, int estadoConservacao, int totalLicencas, String formato, String url, String requisitosLeitura, LocalDate dataDisponibilidade) {
-        super(titulo, autor, ISBN, estadoConservacao);
-        Ebook.totalLicencas = totalLicencas;
-        disponiveis = 0; // Número de cópias disponíveis por edição
-        this.tamanho = tamanho;
-        this.formato = formato;
-        this.url = url;
-        this.requisitosLeitura = requisitosLeitura;
-        this.dataDisponibilidade = LocalDate.now(); // TODO revisar significado desta data
-    }
+
+	public Ebook(String titulo, String autor, String ISBN, String edicao, int estadoConservacao, double tamanho, String formato, String url, String requisitosLeitura) {
+		super(titulo, autor, ISBN, edicao, estadoConservacao);
+		this.tamanho = tamanho;
+		this.formato = formato;
+		this.url = url;
+		this.requisitosLeitura = requisitosLeitura;
+		this.dataDisponibilidade = LocalDate.now(); // TODO revisar significado desta data
+		Ebook.totalLicencas = Ebook.totalLicencas + 1;
+		disponiveis = getDisponiveis() + 1;
+	}
+
 
     public double getTamanho() {
         return tamanho;

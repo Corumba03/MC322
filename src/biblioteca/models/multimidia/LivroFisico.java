@@ -4,6 +4,7 @@ package biblioteca.models.multimidia;
 public class LivroFisico extends ItemMultimidia{
     // Classe que representa todos os livros com mesmo título, autor e ISBN
     private final String ISBN;
+    private String edicao;
     private static int total; // Contagem de exemplares
     private static int disponiveis; // Contagem de exemplares disponíveis
     private int estadoConservacao; // Varia de 0 a 2, sendo 0 novo, 1 conservado e 2 danificado
@@ -11,11 +12,12 @@ public class LivroFisico extends ItemMultimidia{
     private String id; // Código de identificação único do livro
 
     // Construtor
-    public LivroFisico(String titulo, String autor, String ISBN, int estadoConservacao) {
+    public LivroFisico(String titulo, String autor, String ISBN, String edicao, int estadoConservacao) {
         super(titulo, autor);
         this.ISBN = ISBN;
-        total = 0; // Número total de cópias por edição
-        disponiveis = 0; // Número de cópias disponíveis por edição
+        this.edicao = edicao;
+        total = getTotal() + 1; // Número total de cópias por edição
+        disponiveis = getDisponiveis() + 1; // Número de cópias disponíveis por edição
         if (estadoConservacao > 2 || estadoConservacao < 0) {
         	System.out.println("Opção de estado de conservação inválida, insira um número de 0 a 2, sendo:"
         			+ "0: novo, 1: usado e 2: danificado.");}
@@ -85,5 +87,13 @@ public class LivroFisico extends ItemMultimidia{
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getEdicao() {
+        return edicao;
+    }
+
+    public void setEdicao(String edicao) {
+        this.edicao = edicao;
     }
 }
