@@ -53,4 +53,12 @@ public class Emprestimo {
         this.item = item;
     }
 
+	public boolean isAtivo() {
+		return ativo;
+	}
+
+	public void setAtivo(boolean ativo) {
+		this.ativo = ativo;
+	}
+
 }
