@@ -2,11 +2,15 @@ package biblioteca.models;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.List;
 
 public class ReservaSala {
     private LocalDateTime dataReserva;
     private LocalTime horaInicio;
     private LocalTime horaFim;
+	enum StatusReserva {
+		PENDENTE, CONFIRMADA, CANCELADA
+	}
 	public ReservaSala(LocalDateTime dataReserva, LocalTime horaInicio, LocalTime horaFim) {
 		super();
 		this.dataReserva = dataReserva;
@@ -99,13 +103,24 @@ public class ReservaSala {
 	}
 	
 	public class SalaMultimidia {
-		enum RecursoMultimidia {
-			DESKTOP, TABLET, MICROFONE, PROJETOR, PICKUP, CAMERA
+		public enum RecursoMultimidia {
+			DESKTOP, TABLET , MICROFONE, PROJETOR, PICKUP, CAMERA
 		}
+
+		private List<RecursoMultimidia> recursoMultimidia;
+
+		public SalaMultimidia(List<RecursoMultimidia> recursoMultimidia) {
+			this.recursoMultimidia = recursoMultimidia;
+		}
+
+		public List<RecursoMultimidia> getRecursoMultimidia() {
+			return recursoMultimidia;
+		}
+
+		public void setRecursoMultimidia(List<RecursoMultimidia> recursoMultimidia) {
+			this.recursoMultimidia = recursoMultimidia;
+		}
+
 		// TODO implementar boolean disponivel para cada item
-	}
-	
-	enum StatusReserva {
-		PENDENTE, CONFIRMADA, CANCELADA
 	}
 }

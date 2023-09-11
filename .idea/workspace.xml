@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Implementação parcial da parte 6 do lab 04">
-      <change afterPath="$PROJECT_DIR$/src/biblioteca/models/formularios/Multa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/biblioteca/models/relatorios/RelatorioMultas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/multimidia/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/multimidia/CD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/multimidia/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/multimidia/DVD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/multimidia/Ebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/multimidia/Ebook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/multimidia/LivroFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/multimidia/LivroFisico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/multimidia/Outros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/multimidia/Outros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/relatorios/RelatorioDisponibilidade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/relatorios/RelatorioDisponibilidade.java" afterDir="false" />
-    </list>
+    <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Versão final para o Lab 04 (exceto UML)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,7 +129,7 @@
       <workItem from="1693783503236" duration="7087000" />
       <workItem from="1693871347418" duration="7196000" />
       <workItem from="1693924050614" duration="4057000" />
-      <workItem from="1693956885438" duration="2095000" />
+      <workItem from="1693956885438" duration="2865000" />
     </task>
     <task id="LOCAL-00001" summary="I hate Java">
       <option name="closed" value="true" />
@@ -261,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693936096088</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Versão final para o Lab 04 (exceto UML)">
+      <option name="closed" value="true" />
+      <created>1693959179027</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1693959179027</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +287,7 @@
     <MESSAGE value="Implementação dos pontos 2 e 3 (e um pouco do 6) do lab 04" />
     <MESSAGE value="Mais coisas para o Lab 04" />
     <MESSAGE value="Implementação parcial da parte 6 do lab 04" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementação parcial da parte 6 do lab 04" />
+    <MESSAGE value="Versão final para o Lab 04 (exceto UML)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Versão final para o Lab 04 (exceto UML)" />
   </component>
 </project>

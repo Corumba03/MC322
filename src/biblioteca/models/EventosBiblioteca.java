@@ -6,8 +6,12 @@ import java.time.LocalTime;
 import java.util.List;
 
 public class EventosBiblioteca {
+	public enum TipoDeEvento {
+		PALESTRA, WORKSHOP, EXPOSICAO
+	}
 	
 	public class Palestra {
+		private final TipoDeEvento tipo;
 		private String palestrante;
 		private String topico;
 		private LocalDate data;
@@ -16,6 +20,7 @@ public class EventosBiblioteca {
 		private String local;
 		public Palestra(String palestrante, String topico, LocalDate data, LocalTime horario, String local) {
 			super();
+			this.tipo = TipoDeEvento.PALESTRA;
 			this.palestrante = palestrante;
 			this.topico = topico;
 			this.data = data;
@@ -61,6 +66,7 @@ public class EventosBiblioteca {
 	}
 	
 	public class Workshop {
+		private final TipoDeEvento tipo;
 		private String infoInstrutor;
 		private List<String> materiaisNecessarios;
 		private String topico;
@@ -71,6 +77,7 @@ public class EventosBiblioteca {
 		public Workshop(String infoInstrutor, List<String> materiaisNecessarios, String topico, LocalDate data,
 				LocalTime horario, String local) {
 			super();
+			this.tipo = TipoDeEvento.WORKSHOP;
 			this.infoInstrutor = infoInstrutor;
 			this.materiaisNecessarios = materiaisNecessarios;
 			this.topico = topico;
@@ -123,6 +130,7 @@ public class EventosBiblioteca {
 	}
 	
 	public class Exposicao {
+		private final TipoDeEvento tipo;
 		private String topico; // tema
 		private List<String> expositores;
 		private LocalDate data;
@@ -131,6 +139,7 @@ public class EventosBiblioteca {
 		private String local;
 		public Exposicao(String topico, List<String> expositores, Duration duracao, String local) {
 			super();
+			this.tipo = TipoDeEvento.EXPOSICAO;
 			this.topico = topico;
 			this.expositores = expositores;
 			this.duracao = duracao;
@@ -173,8 +182,5 @@ public class EventosBiblioteca {
 			this.horario = horario;
 		}
 	}
-	
-	enum TipoDeEvento {
-		PALESTRA, WORKSHOP, EXPOSICAO
-	}
+
 }
