@@ -1,7 +1,7 @@
 package biblioteca.models;
 
 import java.time.Duration;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 
@@ -14,11 +14,11 @@ public class EventosBiblioteca {
 		private final TipoDeEvento tipo;
 		private String palestrante;
 		private String topico;
-		private LocalDate data;
+		private LocalDateTime data;
 		private LocalTime horario;
 		private Duration duracao;
 		private String local;
-		public Palestra(String palestrante, String topico, LocalDate data, LocalTime horario, String local) {
+		public Palestra(String palestrante, String topico, LocalDateTime data, LocalTime horario, String local) {
 			super();
 			this.tipo = TipoDeEvento.PALESTRA;
 			this.palestrante = palestrante;
@@ -39,10 +39,10 @@ public class EventosBiblioteca {
 		public void setTopico(String topico) {
 			this.topico = topico;
 		}
-		public LocalDate getData() {
+		public LocalDateTime getData() {
 			return data;
 		}
-		public void setData(LocalDate data) {
+		public void setData(LocalDateTime data) {
 			this.data = data;
 		}
 		public LocalTime getHorario() {
@@ -63,6 +63,9 @@ public class EventosBiblioteca {
 		public void setDuracao(Duration duracao) {
 			this.duracao = duracao;
 		}
+		public TipoDeEvento getTipo() {
+			return tipo;
+		}
 	}
 	
 	public class Workshop {
@@ -70,11 +73,11 @@ public class EventosBiblioteca {
 		private String infoInstrutor;
 		private List<String> materiaisNecessarios;
 		private String topico;
-		private LocalDate data;
+		private LocalDateTime data;
 		private LocalTime horario;
 		private Duration duracao;
 		private String local;
-		public Workshop(String infoInstrutor, List<String> materiaisNecessarios, String topico, LocalDate data,
+		public Workshop(String infoInstrutor, List<String> materiaisNecessarios, String topico, LocalDateTime data,
 				LocalTime horario, String local) {
 			super();
 			this.tipo = TipoDeEvento.WORKSHOP;
@@ -103,10 +106,10 @@ public class EventosBiblioteca {
 		public void setTopico(String topico) {
 			this.topico = topico;
 		}
-		public LocalDate getData() {
+		public LocalDateTime getData() {
 			return data;
 		}
-		public void setData(LocalDate data) {
+		public void setData(LocalDateTime data) {
 			this.data = data;
 		}
 		public LocalTime getHorario() {
@@ -127,13 +130,16 @@ public class EventosBiblioteca {
 		public void setDuracao(Duration duracao) {
 			this.duracao = duracao;
 		}
+		public TipoDeEvento getTipo() {
+			return tipo;
+		}
 	}
 	
 	public class Exposicao {
 		private final TipoDeEvento tipo;
 		private String topico; // tema
 		private List<String> expositores;
-		private LocalDate data;
+		private LocalDateTime data;
 		private LocalTime horario;
 		private Duration duracao;
 		private String local;
@@ -169,10 +175,10 @@ public class EventosBiblioteca {
 		public void setLocal(String local) {
 			this.local = local;
 		}
-		public LocalDate getData() {
+		public LocalDateTime getData() {
 			return data;
 		}
-		public void setData(LocalDate data) {
+		public void setData(LocalDateTime data) {
 			this.data = data;
 		}
 		public LocalTime getHorario() {
@@ -180,6 +186,9 @@ public class EventosBiblioteca {
 		}
 		public void setHorario(LocalTime horario) {
 			this.horario = horario;
+		}
+		public TipoDeEvento getTipo() {
+			return tipo;
 		}
 	}
 

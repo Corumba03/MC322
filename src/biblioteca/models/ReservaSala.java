@@ -5,6 +5,7 @@ import java.time.LocalTime;
 import java.util.List;
 
 public class ReservaSala {
+	private StatusReserva status;
     private LocalDateTime dataReserva;
     private LocalTime horaInicio;
     private LocalTime horaFim;
@@ -35,7 +36,13 @@ public class ReservaSala {
 	public void setHoraFim(LocalTime horaFim) {
 		this.horaFim = horaFim;
 	}
-    
+	public StatusReserva getStatus() {
+		return status;
+	}
+	public void setStatus(StatusReserva status) {
+		this.status = status;
+	}
+
 	public class SalaIndividual {
 		private boolean disponivel;
 		private int numeroSala;
@@ -103,24 +110,32 @@ public class ReservaSala {
 	}
 	
 	public class SalaMultimidia {
+		private RecursoMultimidia recurso;
+		private boolean recursoDisponivel;
+
 		public enum RecursoMultimidia {
 			DESKTOP, TABLET , MICROFONE, PROJETOR, PICKUP, CAMERA
 		}
-
-		private List<RecursoMultimidia> recursoMultimidia;
-
-		public SalaMultimidia(List<RecursoMultimidia> recursoMultimidia) {
-			this.recursoMultimidia = recursoMultimidia;
+		public SalaMultimidia(RecursoMultimidia recurso, List<RecursoMultimidia> recursoMultimidia,
+				boolean desktopDisponivel, boolean tabletDisponivel, boolean microfoneDisponivel,
+				boolean projetorDisponivel, boolean pickupDisponivel, boolean cameraDisponivel) {
+			super();
+			this.recurso = recurso;
+			this.recursoDisponivel = desktopDisponivel;
 		}
-
-		public List<RecursoMultimidia> getRecursoMultimidia() {
-			return recursoMultimidia;
+		
+		public RecursoMultimidia getRecurso() {
+			return recurso;
 		}
-
-		public void setRecursoMultimidia(List<RecursoMultimidia> recursoMultimidia) {
-			this.recursoMultimidia = recursoMultimidia;
+		public void setRecurso(RecursoMultimidia recurso) {
+			this.recurso = recurso;
 		}
-
-		// TODO implementar boolean disponivel para cada item
+		public boolean isRecursoDisponivel() {
+			return recursoDisponivel;
+		}
+		public void setCameraDisponivel(boolean cameraDisponivel) {
+			this.recursoDisponivel = cameraDisponivel;
+		}
+		
 	}
 }
