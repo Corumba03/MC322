@@ -5,10 +5,13 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 
+import biblioteca.models.membros.Membro;
+
 public class EventosBiblioteca {
 	public enum TipoDeEvento {
 		PALESTRA, WORKSHOP, EXPOSICAO
 	}
+
 	
 	public class Palestra {
 		private final TipoDeEvento tipo;
@@ -18,15 +21,20 @@ public class EventosBiblioteca {
 		private LocalTime horario;
 		private Duration duracao;
 		private String local;
-		public Palestra(String palestrante, String topico, LocalDateTime data, LocalTime horario, String local) {
+		public List<Membro> participantes; // Lista de participantes do evento
+		public Palestra(TipoDeEvento tipo, String palestrante, String topico, LocalDateTime data, LocalTime horario,
+				Duration duracao, String local, List<Membro> participantes) {
 			super();
-			this.tipo = TipoDeEvento.PALESTRA;
+			this.tipo = tipo;
 			this.palestrante = palestrante;
 			this.topico = topico;
 			this.data = data;
 			this.horario = horario;
+			this.duracao = duracao;
 			this.local = local;
+			this.participantes = participantes;
 		}
+		
 		public String getPalestrante() {
 			return palestrante;
 		}
@@ -66,7 +74,14 @@ public class EventosBiblioteca {
 		public TipoDeEvento getTipo() {
 			return tipo;
 		}
+		public List<Membro> getParticipantes() {
+			return participantes;
+		}
+		public void setParticipantes(List<Membro> participantes) {
+			this.participantes = participantes;
+		}
 	}
+	
 	
 	public class Workshop {
 		private final TipoDeEvento tipo;
@@ -77,17 +92,21 @@ public class EventosBiblioteca {
 		private LocalTime horario;
 		private Duration duracao;
 		private String local;
-		public Workshop(String infoInstrutor, List<String> materiaisNecessarios, String topico, LocalDateTime data,
-				LocalTime horario, String local) {
+		public List<Membro> participantes; // Lista de participantes do evento	
+		public Workshop(TipoDeEvento tipo, String infoInstrutor, List<String> materiaisNecessarios, String topico,
+				LocalDateTime data, LocalTime horario, Duration duracao, String local, List<Membro> participantes) {
 			super();
-			this.tipo = TipoDeEvento.WORKSHOP;
+			this.tipo = tipo;
 			this.infoInstrutor = infoInstrutor;
 			this.materiaisNecessarios = materiaisNecessarios;
 			this.topico = topico;
 			this.data = data;
 			this.horario = horario;
+			this.duracao = duracao;
 			this.local = local;
+			this.participantes = participantes;
 		}
+		
 		public String getInfoInstrutor() {
 			return infoInstrutor;
 		}
@@ -133,7 +152,14 @@ public class EventosBiblioteca {
 		public TipoDeEvento getTipo() {
 			return tipo;
 		}
+		public List<Membro> getParticipantes() {
+			return participantes;
+		}
+		public void setParticipantes(List<Membro> participantes) {
+			this.participantes = participantes;
+		}
 	}
+	
 	
 	public class Exposicao {
 		private final TipoDeEvento tipo;
@@ -143,13 +169,19 @@ public class EventosBiblioteca {
 		private LocalTime horario;
 		private Duration duracao;
 		private String local;
-		public Exposicao(String topico, List<String> expositores, Duration duracao, String local) {
+		public List<Membro> participantes; // Lista de participantes do evento
+		public Exposicao(TipoDeEvento tipo, String topico, List<String> expositores, LocalDateTime data,
+				LocalTime horario, Duration duracao, String local, List<Membro> participantes) {
 			super();
-			this.tipo = TipoDeEvento.EXPOSICAO;
+			this.tipo = tipo;
 			this.topico = topico;
 			this.expositores = expositores;
+			this.data = data;
+			this.horario = horario;
 			this.duracao = duracao;
 			this.local = local;
+			this.participantes = participantes;
+			
 		}
 		public String getTopico() {
 			return topico;
@@ -189,6 +221,12 @@ public class EventosBiblioteca {
 		}
 		public TipoDeEvento getTipo() {
 			return tipo;
+		}
+		public List<Membro> getParticipantes() {
+			return participantes;
+		}
+		public void setParticipantes(List<Membro> participantes) {
+			this.participantes = participantes;
 		}
 	}
 

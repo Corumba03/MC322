@@ -2,16 +2,19 @@ package biblioteca.models.multimidia;
 
 import java.util.UUID;
 
+import biblioteca.models.Biblioteca;
+
 public abstract class ItemMultimidia {
     private String titulo;
     private String autor;
     private String tombo;
     private boolean disponivel;
     
-    public ItemMultimidia(String titulo, String autor) {
+    public ItemMultimidia(String titulo, String autor, Biblioteca biblioteca) {
         this.titulo = titulo;
         this.autor = autor;
         this.tombo = UUID.randomUUID().toString(); // TODO gerar o tombo de forma consistente
+        biblioteca.adicionarItem(this);
     }
 
     public String getTitulo() {
