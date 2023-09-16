@@ -1,5 +1,6 @@
 package biblioteca.models.multimidia;
 
+import java.util.List;
 import java.util.UUID;
 
 import biblioteca.models.Biblioteca;
@@ -9,6 +10,7 @@ public abstract class ItemMultimidia {
     private String autor;
     private String tombo;
     private boolean disponivel;
+    private List<Comentario> comentarios;
     
     public ItemMultimidia(String titulo, String autor, Biblioteca biblioteca) {
         this.titulo = titulo;
@@ -47,5 +49,13 @@ public abstract class ItemMultimidia {
 
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
+    }
+
+    public List<Comentario> getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(List<Comentario> comentarios) {
+        this.comentarios = comentarios;
     }
 }
