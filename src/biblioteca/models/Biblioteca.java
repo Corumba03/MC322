@@ -12,17 +12,17 @@ public class Biblioteca {
     private String nome;
     private String inst; // Instituto
     private int total; // Total de livros
-    private List<Membro> membros;
-    private Set<String> categorias;
+    private static List<Membro> membros;
+    private static Set<String> categorias;
     private Map<String, ItemMultimidia> itens;
-    private Set<Emprestimo> emprestimos;
-    private List<Reserva> reservas;
+    private static Set<Emprestimo> emprestimos;
+    private static List<Reserva> reservas;
     public Biblioteca(String nome, String inst) {
         this.nome = nome;
         this.inst = inst;
         this.total = 0;
-        this.membros = new ArrayList<>();
-        this.categorias = new HashSet<>();
+        membros = new ArrayList<>();
+        categorias = new HashSet<>();
         List<String> elementos = Arrays.asList("Ciências", "Artes", "Tecnologia", "História", "Literatura", "Matemática", "Música", "Filosofia", "Religião", "Saúde", "Educação", "Esportes", "Geografia");
         categorias.addAll(elementos);
         this.itens = new HashMap<>();
@@ -44,7 +44,7 @@ public class Biblioteca {
         return membros;
     }
     public void setMembros(List<Membro> membros) {
-        this.membros = membros;
+        Biblioteca.membros = membros;
     }
     public int getTotal() {
         return total;
@@ -56,7 +56,7 @@ public class Biblioteca {
 		return categorias;
 	}
 	public void setCategorias(Set<String> categorias) {
-		this.categorias = categorias;
+		Biblioteca.categorias = categorias;
 	}
 	public Map<String, ItemMultimidia> getItens() {
 		return itens;
@@ -64,15 +64,39 @@ public class Biblioteca {
 	public void setItens(Map<String, ItemMultimidia> itens) {
 		this.itens = itens;
 	}
-	public void addItem(ItemMultimidia item) {
+
+    public static Set<Emprestimo> getEmprestimos() {
+        return emprestimos;
+    }
+
+    public static void setEmprestimos(Set<Emprestimo> emprestimos) {
+        Biblioteca.emprestimos = emprestimos;
+    }
+
+    public static List<Reserva> getReservas() {
+        return reservas;
+    }
+
+    public static void setReservas(List<Reserva> reservas) {
+        Biblioteca.reservas = reservas;
+    }
+
+    public void addReserva(Reserva reserva){
+        Biblioteca.reservas.add(reserva);
+    }
+    public void addEmprestimo(Emprestimo emprestimo){
+        Biblioteca.emprestimos.add(emprestimo);
+    }
+
+    public void addItem(ItemMultimidia item) {
 		itens.put(item.getTombo(), item);
 	}
     public void addMembro(Membro membro){
-        this.membros.add(membro);
+        membros.add(membro);
     }
 
     public void removerMembro(Membro membro){
-        this.membros.remove(membro);
+        membros.remove(membro);
     }
 
     public void removerMembro(String id){
