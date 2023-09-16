@@ -10,6 +10,7 @@ import java.util.List;
 public abstract class Membro {
     // Classe que representa uma pessoa genérica, por hora sem função específica
     private String nome;
+    private String id; //código exclusivo do membro para controle interno
     private String endereco;
     private List<String> contatos; // Lista com telefones, e-mails, etc
     private final LocalDate dataRegistro; // Data de registro
@@ -92,6 +93,14 @@ public abstract class Membro {
 
     public void setEmprestimos(List<Emprestimo> emprestimos) {
         this.emprestimos = emprestimos;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void renovarEmprestimo(Emprestimo emprestimo){

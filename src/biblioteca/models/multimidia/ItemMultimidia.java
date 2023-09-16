@@ -14,7 +14,7 @@ public abstract class ItemMultimidia {
         this.titulo = titulo;
         this.autor = autor;
         this.tombo = UUID.randomUUID().toString(); // TODO gerar o tombo de forma consistente
-        biblioteca.adicionarItem(this);
+        biblioteca.addItem(this);
     }
 
     public String getTitulo() {

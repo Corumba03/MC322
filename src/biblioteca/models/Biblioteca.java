@@ -1,15 +1,11 @@
 package biblioteca.models;
 
+import biblioteca.models.formularios.Emprestimo;
+import biblioteca.models.formularios.Reserva;
 import biblioteca.models.membros.Membro;
 import biblioteca.models.multimidia.ItemMultimidia;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Biblioteca {
     // Classe que representa uma biblioteca
@@ -19,6 +15,8 @@ public class Biblioteca {
     private List<Membro> membros;
     private Set<String> categorias;
     private Map<String, ItemMultimidia> itens;
+    private Set<Emprestimo> emprestimos;
+    private List<Reserva> reservas;
     public Biblioteca(String nome, String inst) {
         this.nome = nome;
         this.inst = inst;
@@ -66,8 +64,34 @@ public class Biblioteca {
 	public void setItens(Map<String, ItemMultimidia> itens) {
 		this.itens = itens;
 	}
-	public void adicionarItem(ItemMultimidia item) {
+	public void addItem(ItemMultimidia item) {
 		itens.put(item.getTombo(), item);
 	}
+    public void addMembro(Membro membro){
+        this.membros.add(membro);
+    }
+
+    public void removerMembro(Membro membro){
+        this.membros.remove(membro);
+    }
+
+    public void removerMembro(String id){
+        for (Membro membro : membros) {
+            if (membro.getId().equals(id)) {
+                removerMembro(membro);
+                break;
+            }
+        }
+    }
+
+    public Membro getMembro(String id){
+        for (Membro membro : membros){
+            if (membro.getId().equals(id)) {
+                return membro;
+            }
+        }
+        System.out.println("Membro não encontrado.");
+        return null;
+    }
 
 }
