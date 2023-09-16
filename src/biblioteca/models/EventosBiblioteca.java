@@ -11,8 +11,20 @@ public class EventosBiblioteca {
 	public enum TipoDeEvento {
 		PALESTRA, WORKSHOP, EXPOSICAO
 	}
+	private List<Membro> participantes;
 
-	
+	public List<Membro> getParticipantes() {
+		return participantes;
+	}
+
+	public void setParticipantes(List<Membro> participantes) {
+		this.participantes = participantes;
+	}
+
+	public void addParticipante(Membro participante){
+		this.participantes.add(participante);
+	}
+
 	public class Palestra {
 		private final TipoDeEvento tipo;
 		private String palestrante;

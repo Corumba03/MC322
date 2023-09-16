@@ -3,7 +3,7 @@ package biblioteca.models.membros.funcionarios;
 import biblioteca.models.membros.Membro;
 
 public abstract class Funcionario extends Membro {
-	enum Cargo{
+	public enum Cargo{
 		Administrador, Atendente, Gerente
 	}
 	private Cargo cargo; // Cargo do funcionário
