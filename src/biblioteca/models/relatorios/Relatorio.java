@@ -2,20 +2,20 @@ package biblioteca.models.relatorios;
 
 
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public abstract class Relatorio {
-    private LocalDate ultimaMod;  // Data da última modificação
+    private LocalDateTime ultimaMod;  // Data da última modificação
 
     public Relatorio() {
-        this.ultimaMod = LocalDate.now();
+        this.ultimaMod = LocalDateTime.now();
     }
 
-    public LocalDate getUltimaMod() {
+    public LocalDateTime getUltimaMod() {
         return ultimaMod;
     }
 
-    public void setUltimaMod(LocalDate ultimaMod) {
+    public void setUltimaMod(LocalDateTime ultimaMod) {
         this.ultimaMod = ultimaMod;
     }
 }

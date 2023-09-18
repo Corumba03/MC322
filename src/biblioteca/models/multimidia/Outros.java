@@ -11,7 +11,7 @@ public class Outros extends ItemMultimidia{
     
     
     public Outros(String titulo, String autor, String localizacao, String tipoRecurso, String formato, int estadoConservacao) {
-        super(titulo, autor);
+        super(titulo, autor, null);
     	this.localizacao = localizacao;
     	this.tipoRecurso = tipoRecurso;
         this.formato = formato;

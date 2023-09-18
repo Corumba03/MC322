@@ -13,7 +13,7 @@ public class LivroFisico extends ItemMultimidia{
 
     // Construtor
     public LivroFisico(String titulo, String autor, String ISBN, String edicao, int estadoConservacao) {
-        super(titulo, autor);
+        super(titulo, autor, null);
         this.ISBN = ISBN;
         this.edicao = edicao;
         total = getTotal() + 1; // Número total de cópias por edição

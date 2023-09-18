@@ -1,17 +1,24 @@
 package biblioteca.models.relatorios;
 
 public class RelatorioUso extends Relatorio{
-    private int[] emprestimosTotal; // 0: CD; 1: DVD; 2: Ebook; 3: Livro físico; 4: Outros // TODO implementar com enum
+	public enum Item {
+		CD, DVD, EBOOK, LIVRO, OUTROS
+	}
+	private Item emprestimosTotal;
 
-    public RelatorioUso(int[] emprestimosTotal) {
-        this.emprestimosTotal = emprestimosTotal;
+    public RelatorioUso(Item item) {
+        this.emprestimosTotal = item;
     }
-
-    public int[] getEmprestimosTotal() {
+    public Item getEmprestimosTotal() {
         return emprestimosTotal;
     }
-
-    public void setEmprestimosTotal(int[] emprestimosTotal) {
+    public void setEmprestimosTotal(Item emprestimosTotal) {
         this.emprestimosTotal = emprestimosTotal;
     }
+	public Item getItem() {
+		return emprestimosTotal;
+	}
+	public void setItem(Item emprestimosTotal) {
+		this.emprestimosTotal = emprestimosTotal;
+	}
 }

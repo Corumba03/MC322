@@ -3,6 +3,7 @@ package biblioteca.models.membros;
 import biblioteca.models.formularios.Emprestimo;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ public abstract class Membro {
     private String id; //código exclusivo do membro para controle interno
     private String endereco;
     private List<String> contatos; // Lista com telefones, e-mails, etc
-    private final LocalDate dataRegistro; // Data de registro
+    private final LocalDateTime dataRegistro; // Data de registro
     private int limiteEmprestimo; // Limite de empréstimos
     private int prazoEmprestimo; // Prazo limite para empréstimos
     private double multa;
@@ -24,7 +25,7 @@ public abstract class Membro {
         this.endereco = endereco;
         this.contatos = new ArrayList<>();
         this.contatos.add(contato);
-        this.dataRegistro = LocalDate.now();
+        this.dataRegistro = LocalDateTime.now();
         this.emprestimos = new ArrayList<>();
         this.limiteEmprestimo = 1;
         this.prazoEmprestimo = 1;
@@ -83,7 +84,7 @@ public abstract class Membro {
         this.multa = multa;
     }
 
-    public LocalDate getDataRegistro() {
+    public LocalDateTime getDataRegistro() {
         return dataRegistro;
     }
 

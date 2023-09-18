@@ -108,7 +108,7 @@ public class Biblioteca {
         }
     }
 
-    public Membro getMembro(String id){
+    public Membro buscaMembro(String id){
         for (Membro membro : membros){
             if (membro.getId().equals(id)) {
                 return membro;

@@ -5,21 +5,21 @@ import biblioteca.models.formularios.Multa;
 import java.util.List;
 
 public class RelatorioMultas extends Relatorio{
-    private List<Multa> multaList;
+    private List<Multa> listaMulta;
 
-    public RelatorioMultas(List<Multa> multaList) {
-        this.multaList = multaList;
+    public RelatorioMultas(List<Multa> listaMulta) {
+        this.listaMulta = listaMulta;
     }
 
     public List<Multa> getMultaList() {
-        return multaList;
+        return listaMulta;
     }
 
-    public void setMultaList(List<Multa> multaList) {
-        this.multaList = multaList;
+    public void setMultaList(List<Multa> listaMulta) {
+        this.listaMulta = listaMulta;
     }
 
     public void addMulta(Multa multa){
-        this.multaList.add(multa);
+        this.listaMulta.add(multa);
     }
 }
