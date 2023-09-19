@@ -18,7 +18,7 @@ public abstract class Membro {
     private int limiteEmprestimo; // Limite de empréstimos
     private int prazoEmprestimo; // Prazo limite para empréstimos
     private double multa;
-    private List<Emprestimo> emprestimos;
+    private List<Emprestimo> listaEmprestimos;
 
     public Membro(String nome, String endereco, String contato) {
         this.nome = nome;
@@ -26,7 +26,7 @@ public abstract class Membro {
         this.contatos = new ArrayList<>();
         this.contatos.add(contato);
         this.dataRegistro = LocalDateTime.now();
-        this.emprestimos = new ArrayList<>();
+        this.listaEmprestimos = new ArrayList<>();
         this.limiteEmprestimo = 1;
         this.prazoEmprestimo = 1;
         this.multa = 1;
@@ -89,11 +89,11 @@ public abstract class Membro {
     }
 
     public List<Emprestimo> getEmprestimos() {
-        return emprestimos;
+        return listaEmprestimos;
     }
 
-    public void setEmprestimos(List<Emprestimo> emprestimos) {
-        this.emprestimos = emprestimos;
+    public void setEmprestimos(List<Emprestimo> listaEmprestimos) {
+        this.listaEmprestimos = listaEmprestimos;
     }
 
     public String getId() {
@@ -105,7 +105,7 @@ public abstract class Membro {
     }
 
     public void renovarEmprestimo(Emprestimo emprestimo){
-        if (!this.emprestimos.contains(emprestimo)){
+        if (!this.listaEmprestimos.contains(emprestimo)){
             System.out.println("O empréstimo requisitado não existe ou não pertence ao usuário.");
             return;
         }

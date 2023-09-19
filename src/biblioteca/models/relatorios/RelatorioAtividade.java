@@ -12,31 +12,31 @@ public class RelatorioAtividade extends Relatorio{ // Relatório de atividade de
 
     // TODO implementar o período (talvez seja desnecessário já que Emprestimo, Devolucao e Reserva possuem datas)
     private Membro membro; // Membro ao qual o relatório fala sobre
-    private List<Emprestimo> emprestimos; // Lista de empréstimos realizados pelo membro
-    private List<Reserva> reservas; // Lista de reservas pedidas
+    private List<Emprestimo> listaEmprestimos; // Lista de empréstimos realizados pelo membro
+    private List<Reserva> listaReservas; // Lista de reservas pedidas
     private List<Devolucao> devolucoes; // Lista de emprestimos devolvidos
     public RelatorioAtividade(Membro membro) {
         this.membro = membro;
-        this.emprestimos = new ArrayList<>();
-        this.reservas = new ArrayList<>();
+        this.listaEmprestimos = new ArrayList<>();
+        this.listaReservas = new ArrayList<>();
         this.devolucoes = new ArrayList<>();
     }
 
     public List<Emprestimo> getEmprestimos() {
-        return emprestimos;
+        return listaEmprestimos;
     }
 
-    public void setEmprestimos(List<Emprestimo> emprestimos) {
-        this.emprestimos = emprestimos;
+    public void setEmprestimos(List<Emprestimo> listaEmprestimos) {
+        this.listaEmprestimos = listaEmprestimos;
     }
 
 
     public List<Reserva> getReservas() {
-        return reservas;
+        return listaReservas;
     }
 
-    public void setReservas(List<Reserva> reservas) {
-        this.reservas = reservas;
+    public void setReservas(List<Reserva> listaReservas) {
+        this.listaReservas = listaReservas;
     }
 
     public List<Devolucao> getDevolucoes() {

@@ -1,7 +1,7 @@
 package biblioteca.models.multimidia;
 
 
-public class Outros extends ItemMultimidia{
+public class Outros extends ItemMultimidia {
     private static int total; // Contagem de exemplares
     private static int disponiveis; // Contagem de cópias/exemplares disponíveis
     private String localizacao;

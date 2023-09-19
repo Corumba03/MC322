@@ -1,24 +1,27 @@
 package biblioteca.models.formularios;
 
 import biblioteca.models.membros.Membro;
+
 import biblioteca.models.multimidia.ItemMultimidia;
+import biblioteca.models.multimidia.Status;
 
 
 import java.time.LocalDate;
 
 
-public class Emprestimo {
+public class Emprestimo{
     private Membro dono; // Quem pediu o empréstimo
-    private ItemMultimidia item; // Item sendo emprestado
-    private LocalDate criacao; // Data de criação
-    private LocalDate prazo; // Data limite
+    private ItemMultimidia item ; // Item sendo emprestados
+    private LocalDate dataEmprestimo; // Data de criação
+    private LocalDate dataDevolucao; // Data limite
     private boolean ativo; // Uma marca para indicar que o empréstimo ainda está ativo/pendente
 
     public Emprestimo(Membro dono, ItemMultimidia item) {
         this.dono = dono;
-        this.criacao = LocalDate.now()   ;
-        this.prazo = criacao.plusDays(dono.getPrazoEmprestimo());
+        this.dataEmprestimo = LocalDate.now()   ;
+        this.dataDevolucao = dataEmprestimo.plusDays(dono.getPrazoEmprestimo());
         this.item = item;
+        item.setStatus(Status.EMPRESTADO);
     }
 
     public Membro getDono() {
@@ -30,19 +33,19 @@ public class Emprestimo {
     }
 
     public LocalDate getCriacao() {
-        return criacao;
+        return dataEmprestimo;
     }
 
-    public void setCriacao(LocalDate criacao) {
-        this.criacao = criacao;
+    public void setCriacao(LocalDate dataEmprestimo) {
+        this.dataEmprestimo = dataEmprestimo;
     }
 
     public LocalDate getPrazo() {
-        return prazo;
+        return dataDevolucao;
     }
 
-    public void setPrazo(LocalDate prazo) {
-        this.prazo = prazo;
+    public void setPrazo(LocalDate dataDevolucao) {
+        this.dataDevolucao = dataDevolucao;
     }
 
     public ItemMultimidia getItem() {

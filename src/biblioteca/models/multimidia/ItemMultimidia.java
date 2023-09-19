@@ -3,20 +3,19 @@ package biblioteca.models.multimidia;
 import java.util.List;
 import java.util.UUID;
 
-import biblioteca.models.Biblioteca;
 
-public abstract class ItemMultimidia {
+public abstract class ItemMultimidia{
     private String titulo;
     private String autor;
-    private String tombo;
-    private boolean disponivel;
+    private String id;
+    private Status status;
     private List<Comentario> comentarios;
     
-    public ItemMultimidia(String titulo, String autor, Biblioteca biblioteca) {
+    public ItemMultimidia(String titulo, String autor) {
         this.titulo = titulo;
         this.autor = autor;
-        this.tombo = UUID.randomUUID().toString(); // TODO gerar o tombo de forma consistente
-        biblioteca.addItem(this);
+        this.id = UUID.randomUUID().toString(); // TODO gerar o id de forma consistente
+        this.status = Status.DISPONIVEL;
     }
 
     public String getTitulo() {
@@ -36,19 +35,11 @@ public abstract class ItemMultimidia {
     }
 
     public String getTombo() {
-        return tombo;
+        return id;
     }
 
-    public void setTombo(String tombo) {
-        this.tombo = tombo;
-    }
-
-    public boolean isDisponivel() {
-        return disponivel;
-    }
-
-    public void setDisponivel(boolean disponivel) {
-        this.disponivel = disponivel;
+    public void setTombo(String id) {
+        this.id = id;
     }
 
     public List<Comentario> getComentarios() {
@@ -57,5 +48,21 @@ public abstract class ItemMultimidia {
 
     public void setComentarios(List<Comentario> comentarios) {
         this.comentarios = comentarios;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 }

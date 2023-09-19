@@ -15,8 +15,8 @@ public class Biblioteca {
     private static List<Membro> membros;
     private static Set<String> categorias;
     private Map<String, ItemMultimidia> itens;
-    private static Set<Emprestimo> emprestimos;
-    private static List<Reserva> reservas;
+    private static Set<Emprestimo> listaEmprestimos;
+    private static List<Reserva> listaReservas;
     public Biblioteca(String nome, String inst) {
         this.nome = nome;
         this.inst = inst;
@@ -66,26 +66,26 @@ public class Biblioteca {
 	}
 
     public static Set<Emprestimo> getEmprestimos() {
-        return emprestimos;
+        return listaEmprestimos;
     }
 
-    public static void setEmprestimos(Set<Emprestimo> emprestimos) {
-        Biblioteca.emprestimos = emprestimos;
+    public static void setEmprestimos(Set<Emprestimo> listaEmprestimos) {
+        Biblioteca.listaEmprestimos = listaEmprestimos;
     }
 
     public static List<Reserva> getReservas() {
-        return reservas;
+        return listaReservas;
     }
 
-    public static void setReservas(List<Reserva> reservas) {
-        Biblioteca.reservas = reservas;
+    public static void setReservas(List<Reserva> listaReservas) {
+        Biblioteca.listaReservas = listaReservas;
     }
 
     public void addReserva(Reserva reserva){
-        Biblioteca.reservas.add(reserva);
+        Biblioteca.listaReservas.add(reserva);
     }
     public void addEmprestimo(Emprestimo emprestimo){
-        Biblioteca.emprestimos.add(emprestimo);
+        Biblioteca.listaEmprestimos.add(emprestimo);
     }
 
     public void addItem(ItemMultimidia item) {
