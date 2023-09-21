@@ -9,7 +9,7 @@ import biblioteca.models.multimidia.Status;
 import java.time.LocalDate;
 
 
-public class Emprestimo{
+public class Emprestimo {
     private Membro dono; // Quem pediu o empréstimo
     private ItemMultimidia item ; // Item sendo emprestados
     private LocalDate dataEmprestimo; // Data de criação

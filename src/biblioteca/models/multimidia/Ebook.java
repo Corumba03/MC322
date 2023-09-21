@@ -12,7 +12,7 @@ public class Ebook extends LivroFisico {
     private LocalDate dataDisponibilidade;
 
 	public Ebook(String titulo, String autor, String ISBN, String edicao, int estadoConservacao, double tamanho, String formato, String url, String requisitosLeitura) {
-		super(titulo, autor, ISBN, edicao, estadoConservacao);
+		super(titulo, autor, ISBN, edicao, requisitosLeitura, estadoConservacao);
 		this.tamanho = tamanho;
 		this.formato = formato;
 		this.url = url;

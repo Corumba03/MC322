@@ -1,19 +1,31 @@
 package biblioteca.models.multimidia;
 
+import java.util.ArrayList;
+
 import biblioteca.models.formularios.Emprestimo;
+import biblioteca.models.formularios.Reserva;
 
 public class ItemBiblioteca<T>{
     private String titulo;
     private String id;
     private Status status;
+    private ArrayList<Reserva> itensReservados;
+    private ArrayList<Emprestimo> itensEmprestados;
+    private int qtdReservados;
+    private int qtdEmprestados;
 
-    public ItemBiblioteca(String titulo, String id) {
-        this.titulo = titulo;
-        this.id = id;
-        this.status = Status.DISPONIVEL;
-    }
+    public ItemBiblioteca(String titulo, String id, Status status, int qtdReservados, int qtdEmprestados) {
+		super();
+		this.titulo = titulo;
+		this.id = id;
+		this.status = status;
+		this.itensReservados = new ArrayList<Reserva>();
+		this.itensEmprestados = new ArrayList<Emprestimo>();
+		this.qtdReservados = itensEmprestados.size();
+		this.qtdEmprestados = itensEmprestados.size();
+	}
 
-    public String getTitulo() {
+	public String getTitulo() {
         return titulo;
     }
 
@@ -40,9 +52,7 @@ public class ItemBiblioteca<T>{
     public void emprestar() {
     }
     public void devolver() {
-
     }
     public void reservar() {
-
     }
 }
