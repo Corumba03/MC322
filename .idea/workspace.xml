@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Início do lab 07">
+    <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Instanciação de uma classe genérica">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/multimidia/ItemBiblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/generics/ItemBiblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/generics/ListaReservas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/generics/ListaReservas.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +138,9 @@
       <workItem from="1693956885438" duration="2865000" />
       <workItem from="1695080619402" duration="6536000" />
       <workItem from="1695136891947" duration="12000" />
-      <workItem from="1695400746225" duration="2506000" />
+      <workItem from="1695400746225" duration="2835000" />
+      <workItem from="1695511195131" duration="940000" />
+      <workItem from="1695596888400" duration="713000" />
     </task>
     <task id="LOCAL-00001" summary="I hate Java">
       <option name="closed" value="true" />
@@ -307,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695087537867</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Criação das classes genéricas">
+      <option name="closed" value="true" />
+      <created>1695403545261</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1695403545261</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,6 +352,8 @@
     <MESSAGE value="Criação da classe Comentario e adição de um atributo List&lt;Comentario&gt; em ItemMultimidia" />
     <MESSAGE value="Implementação de uma lista de participantes dos eventos e correção de algumas coisas." />
     <MESSAGE value="Início do lab 07" />
-    <option name="LAST_COMMIT_MESSAGE" value="Início do lab 07" />
+    <MESSAGE value="Criação das classes genéricas" />
+    <MESSAGE value="Instanciação de uma classe genérica" />
+    <option name="LAST_COMMIT_MESSAGE" value="Instanciação de uma classe genérica" />
   </component>
 </project>
