@@ -12,7 +12,7 @@ public class CD extends ItemMultimidia {
     private int estadoConservacao; // Varia de 0 a 2, sendo 0 novo, 1 conservado e 2 danificado
 	
     public CD(String titulo, String autor, Duration duracaoTotal, int estadoConservacao) {
-        super(titulo, autor);
+        super(titulo, autor, null);
         totalCopias = getTotalCopias() + 1; // Número total de cópias por edição
         disponiveis = getDisponiveis() + 1; // Número de cópias disponíveis por edição
         this.duracaoTotal = duracaoTotal;

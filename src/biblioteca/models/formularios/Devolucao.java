@@ -1,13 +1,15 @@
 package biblioteca.models.formularios;
 
+import biblioteca.models.multimidia.EstadoConservacao;
+
 import java.time.LocalDate;
 
 public class Devolucao {
     private LocalDate dataEsperada; // Data de devolução esperada
     private LocalDate dataDevolucao; // Data de devolução real
-    private int estadoDevolucao; // Estado de conservação do item quando devolvido
+    private EstadoConservacao estadoDevolucao; // Estado de conservação do item quando devolvido
 
-    public Devolucao(int estadoDevolucao, LocalDate dataEsperada) {
+    public Devolucao(EstadoConservacao estadoDevolucao, LocalDate dataEsperada) {
         this.estadoDevolucao = estadoDevolucao;
         this.dataEsperada = dataEsperada;
         this.dataDevolucao = LocalDate.now();
@@ -28,11 +30,11 @@ public class Devolucao {
         this.dataDevolucao = dataDevolucao;
     }
 
-    public int getEstadoDevolucao() {
+    public EstadoConservacao getEstadoDevolucao() {
         return estadoDevolucao;
     }
 
-    public void setEstadoDevolucao(int estadoDevolucao) {
+    public void setEstadoDevolucao(EstadoConservacao estadoDevolucao) {
         this.estadoDevolucao = estadoDevolucao;
     }
 }

@@ -5,9 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Instanciação de uma classe genérica">
+      <change afterPath="$PROJECT_DIR$/src/bibexceptions/AcessoNegadoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bibexceptions/ArgumentoInvalidoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bibexceptions/IDInvalido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bibexceptions/ItemDanificadoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bibexceptions/ItemIndisponivelException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bibexceptions/ItemInvalidoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bibexceptions/LimiteExcedidoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bibexceptions/LoginInvalidoException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bibexceptions/MultasPendentesException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bibexceptions/SalaIndisponivelException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/biblioteca/models/Disponibilidade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/biblioteca/models/Sala.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/biblioteca/models/multimidia/EstadoConservacao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/generics/ListaReservas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/generics/ListaReservas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/Biblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/formularios/Devolucao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/formularios/Devolucao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/generics/ItemBiblioteca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/generics/ListaEmprestimos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/generics/ListaReservas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/membros/Membro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/membros/Membro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/multimidia/CD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/multimidia/CD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/multimidia/DVD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/multimidia/DVD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/multimidia/ItemMultimidia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/multimidia/ItemMultimidia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/multimidia/LivroFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/multimidia/LivroFisico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/multimidia/Outros.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/multimidia/Outros.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +40,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -63,27 +86,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;marcelo&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Marcelo/Unicamp/MC322(1)/MC322/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Marcelo/Unicamp/MC322/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "marcelo",
+    "last_opened_file_path": "D:/Marcelo/Unicamp/MC322/MC322",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "D:/Marcelo/Unicamp/MC322/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "Errors",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="Push.Settings">
     <option name="SHOW_DETAILS_PANEL" value="false" />
   </component>
@@ -141,6 +164,9 @@
       <workItem from="1695400746225" duration="2835000" />
       <workItem from="1695511195131" duration="940000" />
       <workItem from="1695596888400" duration="713000" />
+      <workItem from="1695598179658" duration="495000" />
+      <workItem from="1695680754297" duration="126000" />
+      <workItem from="1695687506618" duration="4833000" />
     </task>
     <task id="LOCAL-00001" summary="I hate Java">
       <option name="closed" value="true" />
@@ -318,7 +344,15 @@
       <option name="project" value="LOCAL" />
       <updated>1695403545261</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Instanciação de uma classe genérica">
+      <option name="closed" value="true" />
+      <created>1695598194370</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1695598194370</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,5 +389,17 @@
     <MESSAGE value="Criação das classes genéricas" />
     <MESSAGE value="Instanciação de uma classe genérica" />
     <option name="LAST_COMMIT_MESSAGE" value="Instanciação de uma classe genérica" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/biblioteca/models/Biblioteca.java</url>
+          <line>20</line>
+          <properties field="listaDevolucoes" class="biblioteca.models.Biblioteca" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
