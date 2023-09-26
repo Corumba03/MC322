@@ -10,19 +10,13 @@ public class Outros extends ItemMultimidia {
     private int estadoConservacao; // Varia de 0 a 2, sendo 0 novo, 1 conservado e 2 danificado
     
     
-    public Outros(String titulo, String autor, String localizacao, String tipoRecurso, String formato, int estadoConservacao) {
-        super(titulo, autor, null);
+    public Outros(String titulo, String autor, String localizacao, String tipoRecurso, String formato) {
+        super(titulo, autor);
     	this.localizacao = localizacao;
     	this.tipoRecurso = tipoRecurso;
         this.formato = formato;
         total = getTotal() + 1; // Número total de cópias por edição
         disponiveis = getDisponiveis() + 1; // Número de cópias disponíveis por edição
-        if (estadoConservacao > 2 || estadoConservacao < 0) {
-        	System.out.println("Opção de estado de conservação inválida, insira um número de 0 a 2, sendo:"
-        			+ "0: novo, 1: usado e 2: danificado.");}
-        else { 
-        	this.estadoConservacao = estadoConservacao;
-        }
     }
 
 
@@ -75,15 +69,6 @@ public class Outros extends ItemMultimidia {
 		this.formato = formato;
 	}
 
-
-	public int getEstadoConservacao() {
-		return estadoConservacao;
-	}
-
-
-	public void setEstadoConservacao(int estadoConservacao) {
-		this.estadoConservacao = estadoConservacao;
-	}
     
     
 }

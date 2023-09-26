@@ -1,5 +1,6 @@
 package biblioteca.models;
 
+import biblioteca.models.formularios.Devolucao;
 import biblioteca.models.formularios.Emprestimo;
 import biblioteca.models.formularios.Reserva;
 import biblioteca.models.membros.Membro;
@@ -15,8 +16,9 @@ public class Biblioteca {
     private static List<Membro> membros;
     private static Set<String> categorias;
     private Map<String, ItemMultimidia> itens;
-    private static Set<Emprestimo> listaEmprestimos;
-    private static List<Reserva> listaReservas;
+    public static Set<Emprestimo> listaEmprestimos;
+    public static Set<Reserva> listaReservas;
+    public static Set<Devolucao> listaDevolucoes;
     public Biblioteca(String nome, String inst) {
         this.nome = nome;
         this.inst = inst;
@@ -26,6 +28,9 @@ public class Biblioteca {
         List<String> elementos = Arrays.asList("Ciências", "Artes", "Tecnologia", "História", "Literatura", "Matemática", "Música", "Filosofia", "Religião", "Saúde", "Educação", "Esportes", "Geografia");
         categorias.addAll(elementos);
         this.itens = new HashMap<>();
+        listaEmprestimos = new HashSet<>();
+        listaReservas = new HashSet<>();
+        listaDevolucoes = new HashSet<>();
     }
    
     public String getNome() {
@@ -73,12 +78,36 @@ public class Biblioteca {
         Biblioteca.listaEmprestimos = listaEmprestimos;
     }
 
-    public static List<Reserva> getReservas() {
+    public static Set<Reserva> getReservas() {
         return listaReservas;
     }
 
-    public static void setReservas(List<Reserva> listaReservas) {
+    public static void setReservas(Set<Reserva> listaReservas) {
         Biblioteca.listaReservas = listaReservas;
+    }
+
+    public static Set<Emprestimo> getListaEmprestimos() {
+        return listaEmprestimos;
+    }
+
+    public static void setListaEmprestimos(Set<Emprestimo> listaEmprestimos) {
+        Biblioteca.listaEmprestimos = listaEmprestimos;
+    }
+
+    public static Set<Reserva> getListaReservas() {
+        return listaReservas;
+    }
+
+    public static void setListaReservas(Set<Reserva> listaReservas) {
+        Biblioteca.listaReservas = listaReservas;
+    }
+
+    public static Set<Devolucao> getListaDevolucoes() {
+        return listaDevolucoes;
+    }
+
+    public static void setListaDevolucoes(Set<Devolucao> listaDevolucoes) {
+        Biblioteca.listaDevolucoes = listaDevolucoes;
     }
 
     public void addReserva(Reserva reserva){
