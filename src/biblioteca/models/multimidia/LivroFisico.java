@@ -12,7 +12,7 @@ public class LivroFisico extends ItemMultimidia {
     private String id; // Código de identificação único do livro
 
     // Construtor
-    public LivroFisico(String titulo, String autor, String ISBN, String edicao, String editora, int estadoConservacao) {
+    public LivroFisico(String titulo, String autor, String ISBN, String edicao, String editora) {
         super(titulo, autor);
         this.ISBN = ISBN;
         this.edicao = edicao;
@@ -22,7 +22,7 @@ public class LivroFisico extends ItemMultimidia {
         this.disponivel = true;
         this.id = getISBN() + "-" + String.format("%03d", this.getTotal());
     }
-    
+
     // Getters & Setters
     public String getTitulo() {
         return super.getTitulo();

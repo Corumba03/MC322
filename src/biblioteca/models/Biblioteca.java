@@ -15,7 +15,7 @@ public class Biblioteca {
     private int total; // Total de livros
     private static List<Membro> membros;
     private static Set<String> categorias;
-    private Map<String, ItemMultimidia> itens;
+    private Map<String, ItemMultimidia> itens; // ID como chave
     public static Set<Emprestimo> listaEmprestimos;
     public static Set<Reserva> listaReservas;
     public static Set<Devolucao> listaDevolucoes;
