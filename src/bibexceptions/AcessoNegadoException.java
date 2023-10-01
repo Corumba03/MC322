@@ -1,7 +1,7 @@
-package bibexceptions;
+	package bibexceptions;
 
 public class AcessoNegadoException extends Exception{
-    public AcessoNegadoException(String message) {
-        super(message);
+    public AcessoNegadoException(String mensagem) {
+        super(mensagem);
     }
 }
