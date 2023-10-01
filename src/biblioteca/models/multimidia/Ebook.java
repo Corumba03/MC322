@@ -11,8 +11,8 @@ public class Ebook extends LivroFisico {
     private String requisitosLeitura; // Software, dispositivo compatível
     private LocalDate dataDisponibilidade;
 
-	public Ebook(String titulo, String autor, String ISBN, String edicao, int estadoConservacao, double tamanho, String formato, String url, String requisitosLeitura) {
-		super(titulo, autor, ISBN, edicao, estadoConservacao);
+	public Ebook(String titulo, String autor, String ISBN, String edicao, String editora, double tamanho, String formato, String url, String requisitosLeitura) {
+		super(titulo, autor, ISBN, edicao, editora);
 		this.tamanho = tamanho;
 		this.formato = formato;
 		this.url = url;

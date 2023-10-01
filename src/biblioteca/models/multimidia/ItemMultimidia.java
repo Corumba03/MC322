@@ -10,12 +10,14 @@ public abstract class ItemMultimidia{
     private String id;
     private Status status;
     private List<Comentario> comentarios;
+    private EstadoConservacao estadoConservacao;
     
     public ItemMultimidia(String titulo, String autor) {
         this.titulo = titulo;
         this.autor = autor;
         this.id = UUID.randomUUID().toString(); // TODO gerar o id de forma consistente
         this.status = Status.DISPONIVEL;
+        this.estadoConservacao = EstadoConservacao.Novo;
     }
 
     public String getTitulo() {
@@ -64,5 +66,13 @@ public abstract class ItemMultimidia{
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public EstadoConservacao getEstadoConservacao() {
+        return estadoConservacao;
+    }
+
+    public void setEstadoConservacao(EstadoConservacao estadoConservacao) {
+        this.estadoConservacao = estadoConservacao;
     }
 }

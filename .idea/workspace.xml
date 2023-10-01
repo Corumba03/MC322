@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Instanciação de uma classe genérica">
+    <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Início do lab 08">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/generics/ListaReservas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/generics/ListaReservas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/Biblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/membros/funcionarios/Funcionario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/membros/funcionarios/Funcionario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/multimidia/Ebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/multimidia/Ebook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/multimidia/LivroFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/multimidia/LivroFisico.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +19,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -70,7 +72,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;marcelo&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Marcelo/Unicamp/MC322(1)/MC322/src&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Marcelo/Unicamp/MC322/MC322&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -141,6 +143,10 @@
       <workItem from="1695400746225" duration="2835000" />
       <workItem from="1695511195131" duration="940000" />
       <workItem from="1695596888400" duration="713000" />
+      <workItem from="1695598179658" duration="495000" />
+      <workItem from="1695680754297" duration="126000" />
+      <workItem from="1695687506618" duration="5028000" />
+      <workItem from="1696126443817" duration="3573000" />
     </task>
     <task id="LOCAL-00001" summary="I hate Java">
       <option name="closed" value="true" />
@@ -318,7 +324,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695403545261</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Instanciação de uma classe genérica">
+      <option name="closed" value="true" />
+      <created>1695598194370</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1695598194370</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Início do lab 08">
+      <option name="closed" value="true" />
+      <created>1695692579537</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1695692579537</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,6 +376,19 @@
     <MESSAGE value="Início do lab 07" />
     <MESSAGE value="Criação das classes genéricas" />
     <MESSAGE value="Instanciação de uma classe genérica" />
-    <option name="LAST_COMMIT_MESSAGE" value="Instanciação de uma classe genérica" />
+    <MESSAGE value="Início do lab 08" />
+    <option name="LAST_COMMIT_MESSAGE" value="Início do lab 08" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/biblioteca/models/Biblioteca.java</url>
+          <line>20</line>
+          <properties field="listaDevolucoes" class="biblioteca.models.Biblioteca" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
