@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="124a99d5-d612-4221-b5a7-ee9596dfccba" name="Changes" comment="Começo do lab 09">
+      <change afterPath="$PROJECT_DIR$/src/biblioteca/models/padraoprojeto/CItemMultimidiaFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/biblioteca/models/padraoprojeto/CObserver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/biblioteca/models/padraoprojeto/CSingleton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/biblioteca/models/padraoprojeto/ItemMultimidiaFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/biblioteca/models/padraoprojeto/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/biblioteca/models/padraoprojeto/Subject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/Biblioteca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/CReflection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/padraoprojeto/CReflection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/biblioteca/models/multimidia/ItemMultimidia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/biblioteca/models/multimidia/ItemMultimidia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -68,7 +77,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;marcelo&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;octavio&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Marcelo/Unicamp/MC322/MC322&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -149,6 +158,7 @@
       <workItem from="1698711522712" duration="1404000" />
       <workItem from="1698947307191" duration="1916000" />
       <workItem from="1698968749590" duration="1153000" />
+      <workItem from="1699481573848" duration="4347000" />
     </task>
     <task id="LOCAL-00001" summary="I hate Java">
       <option name="closed" value="true" />
@@ -404,7 +414,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/biblioteca/models/Biblioteca.java</url>
-          <line>20</line>
+          <line>21</line>
           <properties field="listaDevolucoes" class="biblioteca.models.Biblioteca" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>

@@ -5,11 +5,12 @@ import biblioteca.models.formularios.Emprestimo;
 import biblioteca.models.formularios.Reserva;
 import biblioteca.models.membros.Membro;
 import biblioteca.models.multimidia.ItemMultimidia;
-
+import biblioteca.models.padraoprojeto.CSingleton;
 import java.util.*;
 
 public class Biblioteca {
     // Classe que representa uma biblioteca
+    private CSingleton CSingletonInstancia;
     private String nome;
     private String inst; // Instituto
     private int total; // Total de livros
@@ -31,6 +32,7 @@ public class Biblioteca {
         listaEmprestimos = new HashSet<>();
         listaReservas = new HashSet<>();
         listaDevolucoes = new HashSet<>();
+        CSingletonInstancia = CSingleton.getInstance();
     }
    
     public String getNome() {
