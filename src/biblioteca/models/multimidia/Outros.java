@@ -69,6 +69,4 @@ public class Outros extends ItemMultimidia {
 		this.formato = formato;
 	}
 
-    
-    
 }
