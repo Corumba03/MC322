@@ -1,10 +1,12 @@
 package biblioteca.models.multimidia;
 
+import biblioteca.models.padraoprojeto.ItemMultimidiaFactory;
+
 import java.util.List;
 import java.util.UUID;
 
 
-public abstract class ItemMultimidia{
+public abstract class ItemMultimidia implements ItemMultimidiaFactory {
     private String titulo;
     private String autor;
     private String id;
