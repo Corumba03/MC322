@@ -77,4 +77,9 @@ public abstract class ItemMultimidia implements ItemMultimidiaFactory {
     public void setEstadoConservacao(EstadoConservacao estadoConservacao) {
         this.estadoConservacao = estadoConservacao;
     }
+
+    @Override
+    public ItemMultimidia criarItemMultimidia() {
+        return null;
+    }
 }
